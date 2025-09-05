@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-style-mode" content="1"> <!-- 0 == light, 1 == dark -->
+
+    <title>Contact</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/favicon.png">
+    <!-- CSS ============================================ -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome-all.min.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/feature.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/animation.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/slick.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/slick-theme.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap-select.min.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/prism.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/style.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/main.css?v=1742280107">
+
+    <!-- Google reCAPTCHA v2 -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>
+        .app-store-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .app-store-link {
+            position: relative;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .app-store-link:hover {
+            transform: scale(1.05);
+        }
+
+        .store-badge {
+            height: 45px;
+            width: auto;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            margin-bottom: 5px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+        .app-store-link:hover .tooltip,
+        .app-store-link:active .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* reCAPTCHA Responsive Styles for viewports below 375px */
+        @media (max-width: 374px) {
+            .g-recaptcha {
+                transform: scale(0.75) !important;
+                transform-origin: 0 0 !important;
+                height: 65px;
+            }
+
+            /* Ensure the reCAPTCHA container doesn't overflow */
+            .g-recaptcha>div {
+                width: 100% !important;
+                max-width: 304px !important;
+            }
+
+            /* Ensure the iframe inside reCAPTCHA is properly contained */
+            .g-recaptcha iframe {
+                max-width: none !important;
+                width: 304px !important;
+            }
+
+            /* Adjust form container padding for better spacing */
+            .bcpt_form_container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        /* Additional responsive adjustments for very small screens */
+        @media (max-width: 320px) {
+            .g-recaptcha {
+                transform: scale(0.75) !important;
+                transform-origin: 0 0 !important;
+                height: 60px;
+            }
+
+            /* Scale down the reCAPTCHA iframe for 320px screens */
+            .g-recaptcha>div {
+                width: 100% !important;
+                max-width: 240px !important;
+            }
+
+            .g-recaptcha iframe {
+                max-width: none !important;
+                width: 240px !important;
+            }
+
+            /* Reduce form container padding even more */
+            .bcpt_form_container {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+
+        /* Extra small screens (below 300px) */
+        @media (max-width: 299px) {
+            .g-recaptcha {
+                transform: scale(0.65) !important;
+                transform-origin: 0 0 !important;
+                height: 55px;
+            }
+
+            .g-recaptcha>div {
+                width: 100% !important;
+                max-width: 195px !important;
+            }
+
+            .g-recaptcha iframe {
+                max-width: none !important;
+                width: 195px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page-wrapper">
+
+        <nav class="aktion-navbar">
+            <div class="aktion-navbar-container">
+                <a href="index.html" class="aktion-logo">
+                    <img src="assets/images/logo/Aktion-AI-logo-TM.png" alt="Aktion AI">
+                </a>
+
+                <button class="aktion-mobile-toggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <ul class="aktion-nav-links">
+                    <li class="aktion-nav-item">
+                        <a href="index.html" class="aktion-nav-link ">Home</a>
+                    </li>
+                    <li class="aktion-nav-item">
+                        <a href="integrations.html" class="aktion-nav-link">Integrations</a>
+                    </li>
+                    <li class="aktion-nav-item">
+                        <a href="company.html" class="aktion-nav-link">Company</a>
+                    </li>
+                    <li class="aktion-nav-item">
+                        <a href="partnership.html" class="aktion-nav-link">Partnership</a>
+                    </li>
+
+                    <li class="aktion-nav-item">
+                        <a href="pricing.html" class="aktion-nav-link">Pricing</a>
+                    </li>
+                </ul>
+
+                <a href="/contact.html" class=" aktion-demo-btn">
+                    Schedule a demo
+                    <span class="aktion-phone-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </a>
+                <button class="aktion-mobile-toggle-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="nav-height"></div>
+        <div class="nav-height"></div>
+        <!-- Sidebar -->
+        <div class="aktion-sidebar">
+            <div class="aktion-sidebar-header">
+                <a href="/" class="aktion-logo">
+                    <img src="assets/images/logo/Aktion-AI-logo-TM.png" alt="Aktion AI">
+                </a>
+                <button class="aktion-sidebar-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="aktion-nav-links">
+                <li class="aktion-nav-item">
+                    <a href="/" class="aktion-nav-link ">Home</a>
+                </li>
+                <li class="aktion-nav-item">
+                    <a href="/partnership.html" class="aktion-nav-link">Partnership</a>
+                </li>
+                <li class="aktion-nav-item">
+                    <a href="/integrations.html" class="aktion-nav-link">Integrations</a>
+                </li>
+                <li class="aktion-nav-item">
+                    <a href="/company.html" class="aktion-nav-link">Company</a>
+                </li>
+                <li class="aktion-nav-item">
+                    <a href="/pricing.html" class="aktion-nav-link">Pricing</a>
+                </li>
+            </ul>
+            <a href="/contact.html" class=" d-sm-none d-md-block aktion-demo-btn">
+                Schedule a demo
+                <span class="aktion-phone-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </span>
+            </a>
+        </div>
+        <div class="aktion-overlay">
+        </div>
+
+        <!-- Imroz Preloader -->
+        <div class="preloader">
+            <div class='loader'>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+            </div>
+        </div>
+
+        <!-- Start Breadcrumb Area  -->
+        <div class="main-content">
+            <!-- Start Breadcarumb area  -->
+            <div class="breadcrumb-bp  pt--50 pb--50">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="breadcrumb-inner text-center">
+                                <h3 class="title h3">Connect with us</h3>
+                                <!-- <ul class="page-list">
+                                    <li class="rainbow-breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="rainbow-breadcrumb-item active">Contact Us</li>
+                                </ul> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Breadcarumb area  -->
+        </div>
+
+        <!-- Start Contact Area  -->
+        <section class="bcpt_contact_section">
+            <div class="container">
+                <div class="row">
+                    <!-- Form Column -->
+                    <div class="col-lg-7 mb-4 mb-lg-0">
+                        <div class="bcpt_form_container">
+                            <h2 class="bcpt_section_title">Your details please</h2>
+                            <form id="contactForm" action='https://app.formester.com/forms/t3jub_18SayZ/submissions'
+                                method='POST'>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <label for="firstName" name="firstName" class="bcpt_form_label">First
+                                            Name</label>
+                                        <input type="text" id="firstName" name="firstName"
+                                            class="form-control bcpt_form_input" required>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <label for="lastName" name="lastName" class="bcpt_form_label">Last Name</label>
+                                        <input type="text" id="lastName" name="lastName"
+                                            class="form-control bcpt_form_input" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <label for="email" class="bcpt_form_label">E-mail</label>
+                                        <input type="email" id="email" name="email" class="form-control bcpt_form_input"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <label for="phone" class="bcpt_form_label">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone" class="form-control bcpt_form_input"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="requirement" class="bcpt_form_label">Requirement</label>
+                                    <textarea id="requirement" name="requirement"
+                                        class="form-control bcpt_form_textarea" required></textarea>
+                                </div>
+
+                                <!-- reCAPTCHA v2 "I'm not a robot" -->
+                                <div class="g-recaptcha mb-3" data-sitekey="6LebgForAAAAALpL5JEcPY4lZ1xfzQgeiw5y-xdq"
+                                    data-callback="recaptchaCallback">
+                                </div>
+
+                                <button type="submit" class="btn bcpt_submit_btn" id="submitBtn">Submit</button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <!-- Information Column -->
+                    <div class="col-lg-5">
+                        <!-- Location Card -->
+                        <div class="bcpt_info_card">
+                            <div class="bcpt_info_container">
+                                <div class="bcpt_icon_container">
+                                    <svg class="bcpt_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" />
+                                        <circle cx="12" cy="10" r="3" />
+                                    </svg>
+                                </div>
+                                <h3 class="bcpt_info_title">Location</h3>
+                            </div>
+
+                            <div class="bcpt_location_item">
+                                <h4 class="bcpt_location_name">Kolkata</h4>
+                                <a href="https://www.google.com/maps/place/Ecospace+Business+Park/@22.5858076,88.4874246,17z/data=!3m1!4b1!4m6!3m5!1s0x3a020ac6499c8499:0x17c545e20b241d8d!8m2!3d22.5858027!4d88.4899995!16s%2Fg%2F1hc1jr17q?entry=ttu&g_ep=EgoyMDI0MDkyNC4wIKXMDSoASAFQAw%3D%3D"
+                                    class="bcpt_location_address" target="_blank">
+                                    Ecospace Business Park<br>
+                                    Newtown, India
+                                </a>
+                            </div>
+
+                            <div class="bcpt_location_item">
+                                <h4 class="bcpt_location_name">Delhi-NCR</h4>
+                                <a href="https://www.google.com/maps/place/Super+Mart+1,+Dlf+Phase+4/@28.4624669,77.0847776,17z/data=!4m10!1m2!2m1!1sOffice+No.+C-062d,+Super+Mart-1,+DLF+Phase+-+4,+Gurugram,+Haryana+122009,+India.!3m6!1s0x390d18d951c8c715:0x7bd03ee1a03a14e0!8m2!3d28.4624409!4d77.0869111!15sClBPZmZpY2UgTm8uIEMtMDYyZCwgU3VwZXIgTWFydC0xLCBETEYgUGhhc2UgLSA0LCBHdXJ1Z3JhbSwgSGFyeWFuYSAxMjIwMDksIEluZGlhLlpJIkdvZmZpY2Ugbm8gYyAwNjJkIHN1cGVyIG1hcnQgMSBkbGYgcGhhc2UgNCBndXJ1Z3JhbSBoYXJ5YW5hIDEyMjAwOSBpbmRpYZIBDWdyb2Nlcnlfc3RvcmXgAQA!16s%2Fg%2F11h7rr32hh?entry=ttu&g_ep=EgoyMDI0MDkyNC4wIKXMDSoASAFQAw%3D%3D"
+                                    class="bcpt_location_address" target="_blank">
+                                    Super Mart-1<br>
+                                    Gurugram, India
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Contact Number Card -->
+                        <div class="bcpt_info_card">
+                            <div class="bcpt_info_container">
+                                <div class="bcpt_icon_container">
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.49999 3L6.49999 21M17.5 3L14.5 21M20.5 8H3.5M19.5 16H2.5"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h3 class="bcpt_info_title">Contact Number</h3>
+                            </div>
+
+                            <a href="tel:+919903004242" class="bcpt_contact_link">+91-9903004242</a>
+                            <a href="tel:+919903004344" class="bcpt_contact_link">+91-9903004344</a>
+                        </div>
+
+                        <!-- Email Card -->
+                        <div class="bcpt_info_card">
+                            <div class="bcpt_info_container">
+                                <div class="bcpt_icon_container">
+                                    <svg class="bcpt_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                    </svg>
+                                </div>
+                                <h3 class="bcpt_info_title">Our Email Address</h3>
+                            </div>
+
+                            <a href="mailto:info@bluecoppertech.com"
+                                class="bcpt_contact_link">info@bluecoppertech.com</a>
+                            <a href="mailto:sales@bluecoppertech.com"
+                                class="bcpt_contact_link">sales@bluecoppertech.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Contact Area  -->
+
+
+
+
+
+        <!-- Start Footer Area  -->
+        <footer class="rainbow-footer footer-style-default footer-style-3 position-relative">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img class="logo-light" src="assets/images/logo/logo.png" alt="ChatBot Logo">
+                                        <img class="logo-dark" src="assets/images/logo/logo.png" alt="ChatBot Logo">
+                                    </a>
+                                </div>
+                                <p class="b1 desc-text">Efficient Translation, Meetings & Task Management</p>
+                                <!-- <h6 class="subtitle">Join our Newsletter</h6>
+                                        <form class="newsletter-form" action="#">
+                                            <div class="form-group">
+                                                <input type="email" placeholder="Enter Your Email Here">
+                                                <button class="btn-default bg-solid-primary" type="submit"><i
+                                                        class="fa-sharp fa-regular fa-arrow-right"></i></button>
+                                            </div>
+                                        </form> -->
+                                <h4 class="subtitle-new">Download Our App</h4>
+                                <div class="app-store-buttons">
+                                    <a href="https://play.google.com/store/apps/details?id=com.bct.aktionairecorder&pcampaignid=web_share"
+                                        target="_blank" class="app-store-link">
+                                        <img src="assets/images/app-store/google-play.png" alt="Get it on Google Play"
+                                            class="store-badge">
+                                    </a>
+                                    <a href="javascript:void(0)" class="app-store-link">
+                                        <img src="assets/images/app-store/app-store.png" alt="Download on the App Store"
+                                            class="store-badge">
+                                        <span class="tooltip">Coming Soon!</span>
+                                    </a>
+                                </div>
+                                <h4 class="subtitle-new mt-4">Socials </h4>
+
+                                <div class="social-icons">
+
+                                    <a href="https://www.facebook.com/aktionai" target="_blank" aria-label="Facebook">
+                                        <!-- Facebook SVG Icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="800px"
+                                            height="800px" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z" />
+                                        </svg>
+                                    </a>
+                                    <!-- <a href="https://x.com/bluecoppertech?t=zVnRLZKMNNInncUaqoK-mA&s=09" target="_blank"
+                                        aria-label="Twitter">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                            viewBox="0 0 50 50">
+                                            <path
+                                                d="M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z">
+                                            </path>
+                                        </svg>
+                                    </a> -->
+                                    <a href="https://www.linkedin.com/showcase/aktion-ai-intelligent-meeting-agent/"
+                                        target="_blank" aria-label="LinkedIn">
+                                        <!-- LinkedIn SVG Icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                            viewBox="0 0 50 50">
+                                            <path
+                                                d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.instagram.com/aktionai/" target="_blank"
+                                        aria-label="Instagram">
+                                        <!-- Instagram SVG Icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 64 64"
+                                            width="64px" height="64px">
+                                            <path
+                                                d="M 21.580078 7 C 13.541078 7 7 13.544938 7 21.585938 L 7 42.417969 C 7 50.457969 13.544938 57 21.585938 57 L 42.417969 57 C 50.457969 57 57 50.455062 57 42.414062 L 57 21.580078 C 57 13.541078 50.455062 7 42.414062 7 L 21.580078 7 z M 47 15 C 48.104 15 49 15.896 49 17 C 49 18.104 48.104 19 47 19 C 45.896 19 45 18.104 45 17 C 45 15.896 45.896 15 47 15 z M 32 19 C 39.17 19 45 24.83 45 32 C 45 39.17 39.169 45 32 45 C 24.83 45 19 39.169 19 32 C 19 24.831 24.83 19 32 19 z M 32 23 C 27.029 23 23 27.029 23 32 C 23 36.971 27.029 41 32 41 C 36.971 41 41 36.971 41 32 C 41 27.029 36.971 23 32 23 z" />
+                                        </svg>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="widget-menu-bottom">
+                                    <h4 class="subtitle-new">Quick Links</h4>
+                                    <div class="inner">
+                                        <ul class="footer-link link-hover">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="integrations.html">Integrations</a></li>
+                                            <li><a href="company.html">Company</a></li>
+                                            <li><a href="partnership.html">Partnership</a></li>
+                                            <li><a href="pricing.html">Pricing</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="widget-menu-top">
+                                    <h4 class="subtitle-new">Address</h4>
+                                    <div class="inner contact-div ">
+
+                                        <ul class="footer-link contact-link">
+                                            <li><i class="contact-icon fa-regular fa-location-dot"></i><a
+                                                    target="_blank"
+                                                    href="https://www.google.com/maps/place/Ecospace+Business+Park/@22.5858076,88.4874246,17z/data=!3m1!4b1!4m6!3m5!1s0x3a020ac6499c8499:0x17c545e20b241d8d!8m2!3d22.5858027!4d88.4899995!16s%2Fg%2F1hc1jr17q?entry=ttu&g_ep=EgoyMDI0MDkyNC4wIKXMDSoASAFQAw%3D%3D">Ecospace
+                                                    Business Park, Newtown, Kolkata , India
+                                                </a></li>
+                                            <li><i class="contact-icon fa-regular fa-location-dot"></i><a
+                                                    target="_blank"
+                                                    href="https://www.google.com/maps/place/Super+Mart+1,+Dlf+Phase+4/@28.4624669,77.0847776,17z/data=!4m10!1m2!2m1!1sOffice+No.+C-062d,+Super+Mart-1,+DLF+Phase+-+4,+Gurugram,+Haryana+122009,+India.!3m6!1s0x390d18d951c8c715:0x7bd03ee1a03a14e0!8m2!3d28.4624409!4d77.0869111!15sClBPZmZpY2UgTm8uIEMtMDYyZCwgU3VwZXIgTWFydC0xLCBETEYgUGhhc2UgLSA0LCBHdXJ1Z3JhbSwgSGFyeWFuYSAxMjIwMDksIEluZGlhLlpJIkdvZmZpY2Ugbm8gYyAwNjJkIHN1cGVyIG1hcnQgMSBkbGYgcGhhc2UgNCBndXJ1Z3JhbSBoYXJ5YW5hIDEyMjAwOSBpbmRpYZIBDWdyb2Nlcnlfc3RvcmXgAQA!16s%2Fg%2F11h7rr32hh?entry=ttu&g_ep=EgoyMDI0MDkyNC4wIKXMDSoASAFQAw%3D%3D">
+                                                    Delhi-NCR: Super Mart-1, Gurugram, India
+
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="widget-menu-top">
+                                    <h4 class="subtitle-new">Contact</h4>
+                                    <div class="inner contact-div ">
+                                        <ul class="footer-link contact-link">
+                                            <li><i class="contact-icon fa-sharp fa-regular fa-envelope"></i><a
+                                                    href="mailto:info@bluecoppertech.com">info@bluecoppertech.com</a>
+                                            </li>
+                                            <li><i class="contact-icon fa-sharp fa-regular fa-envelope"></i><a
+                                                    href="mailto:sales@bluecoppertech.com">sales@bluecoppertech.com</a>
+                                            </li>
+                                            <li><i class="contact-icon fa-regular fa-phone"></i><a
+                                                    href="tel:+919903004242">+91-9903004242</a>
+                                            </li>
+                                            <li><i class="contact-icon fa-regular fa-phone"></i><a
+                                                    href="tel:+919903004344">+91-9903004344</a>
+                                            </li>
+                                        </ul>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="copyright-area copyright-style-one">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="copyright-left">
+                            <ul class="ft-menu link-hover d-flex flex-wrap">
+                                <li class="me-3">
+                                    <a href="contact.html">Contact Us</a>
+                                </li>
+                                <li class="me-3">
+                                    <a href="tos.html">Terms of Service</a>
+                                </li>
+                                <li class="me-3">
+                                    <a href="privacy.html">Privacy Policy</a>
+                                </li>
+                                <li class="me-3">
+                                    <a href="cancellation.html">Cancellation and Refund Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="copyright-center text-center">
+                            <p class="copyright-text mb-0">Copyright © 2025 AktionAI
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 text-lg-end text-md-end text-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <span class="text-white me-2" style="font-size: 1rem;">Product by</span>
+                            <a href="https://bluecoppertech.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/images/logo/BCT.png" alt="bluecoppertech"
+                                    class="bluecopper-copyright-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+    <script src="assets/js/vendor/modernizr.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/jquery.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/bootstrap.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/waypoint.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/wow.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/counterup.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/sal.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/slick.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/text-type.js?v=1742280107"></script>
+    <script src="assets/js/vendor/prism.js?v=1742280107"></script>
+    <script src="assets/js/vendor/bootstrap-select.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/backto-top.js?v=1742280107"></script>
+    <!-- Light Mode Switcher -->
+    <script src="assets/js/vendor/js.cookie.js?v=1742280107"></script>
+    <script src="assets/js/vendor/jquery.style.swicher.js?v=1742280107"></script>
+
+    <script src="assets/js/vendor/jquery-one-page-nav.js?v=1742280107"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js?v=1742280107"></script>
+
+    <!-- reCAPTCHA v2 Checkbox Integration -->
+    <script>
+        // Handle form submission with reCAPTCHA validation
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+
+            // Function to validate reCAPTCHA
+            function validateRecaptcha() {
+                try {
+                    const recaptchaResponse = grecaptcha.getResponse();
+                    console.log('reCAPTCHA response:', recaptchaResponse);
+                    console.log('reCAPTCHA response length:', recaptchaResponse.length);
+
+                    const isValid = recaptchaResponse && recaptchaResponse.length > 0;
+                    console.log('reCAPTCHA validation result:', isValid);
+
+                    return isValid;
+                } catch (error) {
+                    console.error('reCAPTCHA validation error:', error);
+                    console.log('grecaptcha object:', typeof grecaptcha);
+                    return false;
+                }
+            }
+
+            // Function to show error message
+            function showRecaptchaError() {
+                // Remove any existing error message
+                const existingError = document.querySelector('.recaptcha-error');
+                if (existingError) {
+                    existingError.remove();
+                }
+
+                // Create and show error message
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'recaptcha-error alert alert-danger mt-2';
+                errorDiv.style.fontSize = '14px';
+                errorDiv.innerHTML = '<strong>Error:</strong> Please complete the reCAPTCHA verification before submitting.';
+
+                // Insert error message after reCAPTCHA
+                const recaptchaDiv = document.querySelector('.g-recaptcha');
+                recaptchaDiv.parentNode.insertBefore(errorDiv, recaptchaDiv.nextSibling);
+
+                // Scroll to error message
+                errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            // Function to remove error message
+            function removeRecaptchaError() {
+                const existingError = document.querySelector('.recaptcha-error');
+                if (existingError) {
+                    existingError.remove();
+                }
+            }
+
+            // Handle form submission
+            form.addEventListener('submit', function (e) {
+                e.preventDefault(); // Always prevent default submission
+
+                // Validate all form fields first
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return false;
+                }
+
+                // Check reCAPTCHA validation
+                if (!validateRecaptcha()) {
+                    showRecaptchaError();
+                    return false;
+                }
+
+                // Remove any error messages
+                removeRecaptchaError();
+
+                // Disable submit button to prevent double submission
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+
+                // Submit form via AJAX to handle success response
+                submitFormWithAjax(form);
+            });
+
+            // Function to submit form via AJAX
+            function submitFormWithAjax(form) {
+                const formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            // Success response from Formester
+                            showSuccessMessage();
+                            resetCompleteForm();
+                        } else {
+                            // Error response
+                            throw new Error('Form submission failed');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Form submission error:', error);
+                        // If AJAX fails, fall back to normal form submission
+                        form.submit();
+                    });
+            }
+
+            // Function to show success message
+            function showSuccessMessage() {
+                // Remove any existing messages
+                removeRecaptchaError();
+                const existingSuccess = document.querySelector('.success-message');
+                if (existingSuccess) {
+                    existingSuccess.remove();
+                }
+
+                // Create and show success message
+                const successDiv = document.createElement('div');
+                successDiv.className = 'success-message alert alert-success mt-3';
+                successDiv.style.fontSize = '14px';
+                successDiv.innerHTML = '<strong>Success!</strong> Your message has been sent successfully. We will get back to you soon.';
+
+                // Insert success message after the form
+                form.parentNode.insertBefore(successDiv, form.nextSibling);
+
+                // Scroll to success message
+                successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                // Auto-hide success message after 5 seconds
+                setTimeout(() => {
+                    if (successDiv && successDiv.parentNode) {
+                        successDiv.remove();
+                    }
+                }, 5000);
+            }
+
+            // Function to reset the complete form
+            function resetCompleteForm() {
+                // Reset all form fields
+                form.reset();
+
+                // Reset reCAPTCHA
+                try {
+                    grecaptcha.reset();
+                } catch (error) {
+                    console.error('reCAPTCHA reset error:', error);
+                }
+
+                // Reset submit button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit';
+
+                // Remove any error messages
+                removeRecaptchaError();
+
+                // Clear any custom validation states
+                const inputs = form.querySelectorAll('input, textarea');
+                inputs.forEach(input => {
+                    input.classList.remove('is-valid', 'is-invalid');
+                });
+            }
+
+            // Listen for reCAPTCHA completion to remove error message
+            window.recaptchaCallback = function () {
+                removeRecaptchaError();
+                console.log('reCAPTCHA completed successfully');
+
+                // Optional: Send analytics event to track reCAPTCHA usage
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'recaptcha_completed', {
+                        'event_category': 'form_interaction',
+                        'event_label': 'contact_form'
+                    });
+                }
+            };
+
+            // Reset function (can be called externally)
+            window.resetRecaptcha = function () {
+                try {
+                    grecaptcha.reset();
+                    removeRecaptchaError();
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit';
+                } catch (error) {
+                    console.error('reCAPTCHA reset error:', error);
+                }
+            };
+
+            // Global function to reset entire form (can be called externally)
+            window.resetContactForm = function () {
+                resetCompleteForm();
+            };
+
+            // Alternative approach: Check for success in URL parameters or localStorage
+            // This handles cases where Formester redirects back with success parameters
+            function checkForFormesterSuccess() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const hasSuccessParam = urlParams.has('success') || urlParams.has('submitted') || urlParams.has('thank-you');
+                const hasSuccessStorage = localStorage.getItem('formester_success') === 'true';
+
+                if (hasSuccessParam || hasSuccessStorage) {
+                    showSuccessMessage();
+                    resetCompleteForm();
+
+                    // Clean up URL parameters
+                    if (hasSuccessParam) {
+                        const newUrl = window.location.pathname;
+                        window.history.replaceState({}, document.title, newUrl);
+                    }
+
+                    // Clean up localStorage
+                    localStorage.removeItem('formester_success');
+                }
+            }
+
+            // Check for success on page load
+            checkForFormesterSuccess();
+
+            // Set flag before form submission (for redirect scenarios)
+            form.addEventListener('submit', function () {
+                localStorage.setItem('formester_submit_time', Date.now().toString());
+            });
+
+            // Check for success when page becomes visible again (handles redirects)
+            document.addEventListener('visibilitychange', function () {
+                if (!document.hidden) {
+                    const submitTime = localStorage.getItem('formester_submit_time');
+                    if (submitTime && (Date.now() - parseInt(submitTime)) < 10000) { // Within 10 seconds
+                        setTimeout(checkForFormesterSuccess, 1000); // Check after 1 second
+                    }
+                }
+            });
+
+            // Debug reCAPTCHA loading
+            window.addEventListener('load', function () {
+                setTimeout(function () {
+                    if (typeof grecaptcha === 'undefined') {
+                        console.error('reCAPTCHA failed to load. Check your internet connection and site key.');
+                    } else {
+                        console.log('reCAPTCHA loaded successfully');
+                        console.log('Site key in use');
+                    }
+                }, 2000);
+            });
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const premierCard = document.querySelector('.opti_price_card_premier');
+            const enterpriseCard = document.querySelector('.opti_price_card:last-child');
+
+            // Function to toggle the premier class
+            function togglePremierClass(clickedCard) {
+                // Remove class from both cards
+                premierCard.classList.remove('opti_price_card_premier');
+                enterpriseCard.classList.remove('opti_price_card_premier');
+
+                // Add class to clicked card
+                clickedCard.classList.add('opti_price_card_premier');
+            }
+
+            // Add click event listeners to both cards
+            premierCard.addEventListener('click', function () {
+                togglePremierClass(this);
+            });
+
+            enterpriseCard.addEventListener('click', function () {
+                togglePremierClass(this);
+            });
+        });
+    </script>
+</body>
+
+</html>

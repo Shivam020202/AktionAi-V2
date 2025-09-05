@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-style-mode" content="0">
+
+    <title>Pricing</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/favicon.png">
+    <!-- CSS ============================================ -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome-all.min.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/feature.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/animation.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/slick.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/slick-theme.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap-select.min.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/prism.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/style.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/main.css?v=1742280107">
+
+    <style>
+        .app-store-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .app-store-link {
+            position: relative;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .app-store-link:hover {
+            transform: scale(1.05);
+        }
+
+        .store-badge {
+            height: 45px;
+            width: auto;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            margin-bottom: 5px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+        .app-store-link:hover .tooltip,
+        .app-store-link:active .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .opti_price_quote {
+            display: inline-block;
+            margin-top: 0.75rem;
+            background-color: #e63946;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .opti_price_quote:hover {
+            background-color: #d32f2f;
+            color: #fff !important;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page-wrapper">
+
+        <nav class="aktion-navbar">
+            <div class="aktion-navbar-container">
+                <a href="index.html" class="aktion-logo">
+                    <img src="assets/images/logo/Aktion-AI-logo-TM.png" alt="Aktion AI">
+                </a>
+
+                <button class="aktion-mobile-toggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <ul class="aktion-nav-links">
+                    <li class="aktion-nav-item">
+                        <a href="index.html" class="aktion-nav-link ">Home</a>
+                    </li>
+                    <li class="aktion-nav-item">
+                        <a href="integrations.html" class="aktion-nav-link">Integrations</a>
+                    </li>
+                    <li class="aktion-nav-item">
+                        <a href="company.html" class="aktion-nav-link">Company</a>
+                    </li>
+                    <li class="aktion-nav-item">
+                        <a href="partnership.html" class="aktion-nav-link">Partnership</a>
+                    </li>
+
+                    <li class="aktion-nav-item">
+                        <a href="pricing.html" class="aktion-nav-link active">Pricing</a>
+                    </li>
+                </ul>
+
+                <a href="/contact.html" class=" aktion-demo-btn">
+                    Schedule a demo
+                    <span class="aktion-phone-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </a>
+                <button class="aktion-mobile-toggle-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="nav-height"></div>
+        <div class="nav-height"></div>
+        <!-- Sidebar -->
+        <div class="aktion-sidebar">
+            <div class="aktion-sidebar-header">
+                <a href="/" class="aktion-logo">
+                    <img src="assets/images/logo/Aktion-AI-logo-TM.png" alt="Aktion AI">
+                </a>
+                <button class="aktion-sidebar-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="aktion-nav-links">
+                <li class="aktion-nav-item">
+                    <a href="/" class="aktion-nav-link ">Home</a>
+                </li>
+                <li class="aktion-nav-item">
+                    <a href="/partnership.html" class="aktion-nav-link">Partnership</a>
+                </li>
+                <li class="aktion-nav-item">
+                    <a href="/integrations.html" class="aktion-nav-link">Integrations</a>
+                </li>
+                <li class="aktion-nav-item">
+                    <a href="/company.html" class="aktion-nav-link">Company</a>
+                </li>
+                <li class="aktion-nav-item">
+                    <a href="/pricing.html" class="aktion-nav-link active">Pricing</a>
+                </li>
+            </ul>
+            <a href="/contact.html" class=" d-sm-none d-md-block aktion-demo-btn">
+                Schedule a demo
+                <span class="aktion-phone-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </span>
+            </a>
+        </div>
+        <div class="aktion-overlay">
+        </div>
+
+        <div class="preloader">
+            <div class='loader'>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div>
+                <div class="breadcrumb-bp  pt--50 pb--50">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="breadcrumb-inner text-center">
+                                    <h3 class="title h3">Our Pricing</h3>
+                                    <p class="bc-desc">Compare plans & features</p>
+                                    <!-- <ul class="page-list">
+                                        <li class="rainbow-breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="rainbow-breadcrumb-item active">Pricing</li>
+                                    </ul> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <div class="container-fluid">
+                    <!-- Start Pricing Compare Detailed  -->
+                    <!-- Pricing Comparison Table -->
+                    <div class="pricing-comparison-section">
+                        <div class="container">
+                            <!-- Pricing Toggle -->
+                            <div class="pricing-toggle-wrapper">
+                                <div class="pricing-toggle">
+                                    <button class="toggle-btn" data-period="yearly">Yearly</button>
+                                    <button class="toggle-btn active" data-period="monthly">Monthly</button>
+                                </div>
+                            </div>
+
+                            <!-- Mobile Plan Tabs (Hidden on Desktop) -->
+                            <div class="mobile-plan-tabs" style="display: none;">
+                                <button class="mobile-tab active" data-plan="personal">
+                                    <div class="tab-title">Personal</div>
+                                    <div class="tab-price">Always Free</div>
+                                </button>
+                                <button class="mobile-tab" data-plan="pro">
+                                    <div class="tab-title">Pro</div>
+                                    <div class="tab-price">
+                                        <span class="mobile-yearly-price" style="display: none;">
+                                            <s style="font-size: 10px;">₹9,000/Year</s> <br>
+                                            <span style="color: #e63946;font-weight: 800;">₹7,080</span>/Year <br>
+                                            <span style="font-size: 10px;">
+                                                <span style="color: #e63946;font-weight: 800;">*</span>
+                                                Early Bird Discount
+                                            </span>
+                                            <span style="font-size: 9px; color: #6c757d;">Inclusive of GST</span>
+                                        </span>
+                                        <span class="mobile-monthly-price">
+                                            <s style="font-size: 10px;">₹750/Month</s> <br>
+                                            <span style="color: #e63946;font-weight: 800;">₹590</span>/Month <br>
+                                            <span style="font-size: 10px;">
+                                                <span style="color: #e63946;font-weight: 800;">*</span>
+                                                Early Bird Discount
+                                            </span>
+                                            <span style="font-size: 9px; color: #6c757d;">Inclusive of GST</span>
+                                        </span>
+                                    </div>
+                                </button>
+                                <button class="mobile-tab" data-plan="enterprise">
+                                    <div class="tab-title">Enterprise</div>
+                                    <div class="tab-price">Contact Sales <br><span style="font-size: 10px;">(Minimum 5 Licenses)</span></div>
+                                </button>
+                            </div>
+
+                            <!-- Pricing Table -->
+                            <div class="pricing-table-container">
+                                <table class="pricing-table">
+                                    <!-- Header Row with Plan Names and Prices -->
+                                    <thead>
+                                        <tr class="pricing-header-row">
+                                            <th class="empty-cell"></th>
+                                            <th class="plan-column">
+                                                <div class="plan-info">
+                                                    <h3 class="plan-title">Personal</h3>
+                                                    <div class="plan-price">
+                                                        <span class="price-period">Always Free</span>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th class="plan-column">
+                                                <div class="plan-info">
+                                                    <h3 class="plan-title">Pro</h3>
+                                                    <div class="plan-price">
+                                                        <span class="yearly-price" style="display: none;">
+                                                            <s style="font-size: 14px; color: #6c757d;">₹9,000/Year</s><br>
+                                                            <span class="price-amount" style="color: #e63946;font-weight: 800;">₹7,080</span><span class="price-period">/Year</span> <span style="color: #e63946;font-weight: 800;">*</span><br>
+                                                            <span style="font-size: 12px; color: #6c757d;">
+                                                                <span style="color: #e63946;font-weight: 800;">*</span>
+                                                                Early Bird Discount
+                                                            </span>
+                                                            <span style="font-size: 11px; color: #6c757d;">Inclusive of GST</span>
+                                                        </span>
+                                                        <span class="monthly-price">
+                                                            <s style="font-size: 14px; color: #6c757d;">₹750/Month</s><br>
+                                                            <span class="price-amount" style="color: #e63946;font-weight: 800;">₹590</span><span class="price-period">/Month</span> <span style="color: #e63946;font-weight: 800;">*</span><br>
+                                                            <span style="font-size: 12px; color: #6c757d;">
+                                                                <span style="color: #e63946;font-weight: 800;">*</span>
+                                                                Early Bird Discount
+                                                            </span>
+                                                            <span style="font-size: 11px; color: #6c757d;">Inclusive of GST</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th class="plan-column">
+                                                <div class="plan-info">
+                                                    <h3 class="plan-title">Enterprise</h3>
+                                                    <div class="plan-price">
+                                                        <span class="price-period">Contact Sales <br>
+                                                            <span style="font-size: 10px;">(Minimum 5 Licenses)</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Key Features Section Header -->
+                                        <tr class="section-header">
+                                            <td class="section-title">Key Features</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                        <!-- Feature Rows -->
+                                        <tr class="feature-row">
+                                            <td class="feature-name">AI Summaries, Transcription and Action Items</td>
+                                            <td class="feature-value">
+                                                30 Minutes Daily
+                                            </td>
+                                            <td class="feature-value">
+                                                1800 minutes / Month
+                                            </td>
+                                            <td class="feature-value">
+                                                Unlimited
+                                            </td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Online and Offline Audio Recording</td>
+                                            <td class="feature-value">30 Minutes Daily</td>
+                                            <td class="feature-value">1 hour per Recording</td>
+                                            <td class="feature-value">Unlimited</td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Transcripts & Summaries in 5+ Languages</td>
+                                            <td class="feature-value">Predefine 1 language only</td>
+                                            <td class="feature-value"><i class="fas fa-check feature-check"></i></td>
+                                            <td class="feature-value"><i class="fas fa-check feature-check"></i></td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Intelligent Search</td>
+                                            <td class="feature-value">—</td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Meeting History Retention</td>
+                                            <td class="feature-value">7 Days</td>
+                                            <td class="feature-value">Unlimited</td>
+                                            <td class="feature-value">Unlimited</td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Upload Meeting Transcripts</td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">SSO</td>
+                                            <td class="feature-value"><i class="fas fa-check feature-check"></i></td>
+                                            <td class="feature-value"><i class="fas fa-check feature-check"></i></td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <!-- Key Features Section Header -->
+                                        <tr class="section-header">
+                                            <td class="section-title">Additional Features</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                        <!-- Feature Rows -->
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Audit Trail and Change Log</td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Enhanced Analytics & Reporting</td>
+                                            <td class="feature-value">—</td>
+                                            <td class="feature-value">—</td>
+                                            <td class="feature-value"><i class="fas fa-check feature-check"></i></td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Enterprise-Grade Security & Compliance</td>
+                                            <td class="feature-value"><i class="fas fa-check feature-check"></i></td>
+                                            <td class="feature-value"><i class="fas fa-check feature-check"></i></td>
+                                            <td class="feature-value"><i class="fas fa-check feature-check"></i></td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Dedicated Account Manager</td>
+                                            <td class="feature-value">—</td>
+                                            <td class="feature-value">—</td>
+                                            <td class="feature-value"><i class="fas fa-check feature-check"></i></td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Sync with Calendar in Mobile App</td>
+                                            <td class="feature-value">—</td>
+                                            <td class="feature-value">—</td>
+                                            <td class="feature-value"><i class="fas fa-check feature-check"></i></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <!-- Key Features Section Header -->
+                                        <tr class="section-header">
+                                            <td class="section-title">Advanced Features</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                        <!-- Feature Rows -->
+                                        <tr class="feature-row">
+                                            <td class="feature-name">On-Premise Deployment with Custom Data</td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Custom Integration</td>
+                                            <td class="feature-value">—</td>
+                                            <td class="feature-value">—</td>
+                                            <td class="feature-value"><i class="fas fa-check feature-check"></i></td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Multi LLM Support</td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Co-branded solutions</td>
+                                            <td class="feature-value">—</td>
+                                            <td class="feature-value">—</td>
+                                            <td class="feature-value"><i class="fas fa-check feature-check"></i></td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Intelligent Search</td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <!-- Key Features Section Header -->
+                                        <tr class="section-header">
+                                            <td class="section-title">Usage Limits</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                        <!-- Feature Rows -->
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Recording Storage</td>
+                                            <td class="feature-value">
+                                                100MB
+                                            </td>
+                                            <td class="feature-value">
+                                                5GB
+                                            </td>
+                                            <td class="feature-value">
+                                                Unlimited
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <!-- Key Features Section Header -->
+                                        <tr class="section-header">
+                                            <td class="section-title">Admin Controls</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                        <!-- Feature Rows -->
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Centralized Billing</td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">User management</td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Manager View</td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Custom Branding for Emails</td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                    <tbody>
+                                        <!-- Key Features Section Header -->
+                                        <tr class="section-header">
+                                            <td class="section-title">Support</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                        <!-- Feature Rows -->
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Dedicated Support</td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                —
+                                            </td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                        </tr>
+                                        <tr class="feature-row">
+                                            <td class="feature-name">Chat Based Support</td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                            <td class="feature-value">
+                                                <i class="fas fa-check feature-check"></i>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <style>
+                        .pricing-comparison-section {
+                            padding: 60px 0;
+                            background-color: #f8f9fa;
+                        }
+
+                        .pricing-toggle-wrapper {
+                            display: flex;
+                            justify-content: center;
+                            margin-bottom: 50px;
+                            position: relative;
+                        }
+
+                        .pricing-toggle {
+                            position: relative;
+                            display: flex;
+                            background: linear-gradient(135deg, #e63946 0%, #c62d3a 100%);
+                            border-radius: 50px;
+                            padding: 6px;
+                            box-shadow: 0 8px 25px rgba(230, 57, 70, 0.3);
+                            overflow: hidden;
+                        }
+
+                        .pricing-toggle::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+                            border-radius: 50px;
+                            pointer-events: none;
+                        }
+
+                        .toggle-btn {
+                            position: relative;
+                            padding: 14px 28px;
+                            border: none;
+                            background: transparent;
+                            border-radius: 50px;
+                            font-weight: 600;
+                            font-size: 15px;
+                            cursor: pointer;
+                            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                            z-index: 2;
+                            min-width: 100px;
+                            text-transform: uppercase;
+                            letter-spacing: 0.5px;
+                        }
+
+                        .toggle-btn:hover {
+                            color: rgba(255, 255, 255, 0.9);
+                            transform: translateY(-1px);
+                        }
+
+                        .toggle-btn.active {
+                            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+                            color: #495057;
+                            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                        }
+
+                        .toggle-btn.active::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            border-radius: 50px;
+                            z-index: -1;
+                        }
+
+                        .pricing-table-container {
+                            margin: 0 auto;
+                            background: white;
+                            border-radius: 12px;
+                            overflow: hidden;
+                            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+                        }
+
+                        .pricing-table {
+                            width: 100%;
+                            border-collapse: collapse;
+                            margin: 0;
+                            table-layout: auto;
+                        }
+
+                        .empty-cell {
+                            background: transparent;
+                            border: none;
+                            width: 25%;
+                        }
+
+                        .plan-column {
+                            background: white;
+                            text-align: center;
+                            padding: 30px 20px;
+                            border-bottom: 1px solid #e9ecef;
+                            width: 25%;
+                        }
+
+                        .plan-info {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+
+                        .plan-title {
+                            font-size: 24px;
+                            font-weight: 700;
+                            margin-bottom: 10px;
+                            color: #212529;
+                        }
+
+                        .plan-price {
+                            display: flex;
+                            align-items: baseline;
+                            justify-content: center;
+                            gap: 2px;
+                        }
+
+                        .price-amount {
+                            font-size: 32px;
+                            font-weight: 700;
+                            color: #e63946;
+                            line-height: 1;
+                        }
+
+                        .price-period {
+                            font-size: 16px;
+                            color: #6c757d;
+                            font-weight: 500;
+                            line-height: normal;
+                        }
+
+                        .section-header {
+                            background-color: #e9ecef;
+                        }
+
+                        .section-title {
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: #495057;
+                            padding: 20px;
+                            text-align: left;
+                            background-color: #e9ecef;
+                        }
+
+                        .feature-row {
+                            border-bottom: 1px solid #f1f3f4;
+                            transition: background-color 0.2s ease;
+                        }
+
+                        .feature-row:hover {
+                            background-color: #f8f9fa;
+                        }
+
+                        .feature-row:last-child {
+                            border-bottom: none;
+                        }
+
+                        .feature-name {
+                            font-size: 14px;
+                            color: #495057;
+                            font-weight: 500;
+                            text-align: left;
+                            padding: 20px;
+                            border-right: 1px solid #f1f3f4;
+                            word-wrap: break-word;
+                            word-break: break-word;
+                            hyphens: auto;
+                            line-height: 1.5;
+                            max-width: 300px;
+                        }
+
+                        .feature-value {
+                            text-align: center;
+                            font-size: 14px;
+                            color: #6c757d;
+                            font-weight: 500;
+                            padding: 20px;
+                            border-right: 1px solid #f1f3f4;
+                            word-wrap: break-word;
+                            word-break: break-word;
+                            hyphens: auto;
+                            line-height: 1.5;
+                            min-width: 120px;
+                        }
+
+                        .feature-value:last-child {
+                            border-right: none;
+                        }
+
+                        .feature-check {
+                            color: #28a745;
+                            font-size: 20px;
+                        }
+
+                        /* Responsive Design */
+
+                        /* Large Desktop (1200px and up) */
+                        @media (min-width: 1200px) {
+                            /* .pricing-table-container {
+                                max-width: 900px;
+                            } */
+
+                            .plan-title {
+                                font-size: 26px;
+                            }
+
+                            .price-amount {
+                                font-size: 32px;
+                            }
+                        }
+
+                        /* Desktop (992px to 1199px) */
+                        @media (max-width: 1199px) and (min-width: 992px) {
+                            /* .pricing-table-container {
+                                max-width: 800px;
+                            } */
+                        }
+
+                        /* Tablet Landscape (768px to 991px) */
+                        @media (max-width: 991px) and (min-width: 768px) {
+                            .pricing-comparison-section {
+                                padding: 40px 0;
+                            }
+
+                            .pricing-table-container {
+                                margin: 0 20px;
+                                max-width: none;
+                            }
+
+                            .plan-column {
+                                padding: 25px 15px;
+                            }
+
+                            .plan-title {
+                                font-size: 22px;
+                                margin-bottom: 12px;
+                            }
+
+                            .price-amount {
+                                font-size: 30px;
+                            }
+
+                            .feature-name,
+                            .feature-value {
+                                padding: 15px;
+                                font-size: 13px;
+                            }
+
+                            .toggle-btn {
+                                padding: 12px 24px;
+                                font-size: 14px;
+                                min-width: 90px;
+                            }
+                        }
+
+                        /* Tablet Portrait (576px to 767px) */
+                        @media (max-width: 767px) and (min-width: 576px) {
+                            .pricing-comparison-section {
+                                padding: 30px 0;
+                            }
+
+                            .pricing-toggle-wrapper {
+                                margin-bottom: 30px;
+                            }
+
+                            .toggle-btn {
+                                padding: 10px 20px;
+                                font-size: 13px;
+                                min-width: 80px;
+                            }
+
+                            .pricing-table-container {
+                                margin: 0 15px;
+                                overflow-x: auto;
+                            }
+
+                            .pricing-table {
+                                min-width: 600px;
+                            }
+
+                            .plan-column {
+                                padding: 20px 12px;
+                                min-width: 150px;
+                            }
+
+                            .plan-title {
+                                font-size: 20px;
+                                margin-bottom: 10px;
+                            }
+
+                            .price-amount {
+                                font-size: 28px;
+                            }
+
+                            .feature-name {
+                                padding: 12px;
+                                font-size: 13px;
+                            }
+
+                            .feature-value {
+                                padding: 12px;
+                                font-size: 12px;
+                            }
+                        }
+
+                        /* Mobile (up to 575px) */
+                        @media (max-width: 575px) {
+                            .pricing-comparison-section {
+                                padding: 20px 0;
+                            }
+
+                            .pricing-toggle-wrapper {
+                                margin-bottom: 25px;
+                            }
+
+                            .pricing-toggle {
+                                padding: 4px;
+                            }
+
+                            .toggle-btn {
+                                padding: 8px 16px;
+                                font-size: 12px;
+                                min-width: 70px;
+                                letter-spacing: 0.3px;
+                            }
+
+                            .pricing-table-container {
+                                margin: 0 10px;
+                            }
+
+                            .pricing-table,
+                            .pricing-table thead,
+                            .pricing-table tbody,
+                            .pricing-table th,
+                            .pricing-table td,
+                            .pricing-table tr {
+                                display: block;
+                            }
+
+                            .pricing-header-row {
+                                display: none !important;
+                            }
+
+                            .empty-cell {
+                                display: none;
+                            }
+
+                            /* Mobile Plan Tabs */
+                            .mobile-plan-tabs {
+                                display: flex !important;
+                                flex-direction: column;
+                                gap: 15px;
+                                margin-bottom: 30px;
+                                padding: 0 15px;
+                            }
+
+                            .mobile-tab {
+                                width: 100%;
+                                padding: 20px;
+                                text-align: center;
+                                background: #f8f9fa;
+                                border: 2px solid #e9ecef;
+                                border-radius: 15px;
+                                cursor: pointer;
+                                transition: all 0.3s ease;
+                                color: #6c757d;
+                                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 8px;
+                            }
+
+                            .tab-title {
+                                font-size: 18px;
+                                font-weight: 600;
+                            }
+
+                            .tab-price {
+                                font-size: 14px;
+                                font-weight: 500;
+                                opacity: 0.8;
+                            }
+
+                            .mobile-tab.active {
+                                background: white;
+                                border: 2px solid #e63946;
+                                color: #e63946;
+                                box-shadow: 0 4px 15px rgba(230, 57, 70, 0.15);
+                                transform: translateY(-2px);
+                            }
+
+                            .mobile-tab.active .tab-price {
+                                opacity: 1;
+                                font-weight: 600;
+                            }
+
+                            .mobile-tab:hover:not(.active) {
+                                background: #e9ecef;
+                                border-color: #dee2e6;
+                                transform: translateY(-1px);
+                            }
+
+                            .plan-column {
+                                display: none;
+                            }
+
+                            .section-header {
+                                display: block;
+                            }
+
+                            .section-title {
+                                display: block;
+                                width: 100%;
+                                text-align: left;
+                                border-bottom: 1px solid #e9ecef;
+                                padding: 20px 15px;
+                                font-size: 18px;
+                                font-weight: 600;
+                                background-color: #f8f9fa;
+                                color: #212529;
+                            }
+
+                            /* Hide empty cells in section headers on mobile */
+                            .section-header td:not(.section-title) {
+                                display: none !important;
+                            }
+
+                            .feature-row {
+                                display: flex !important;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 20px 15px;
+                                border-bottom: 1px solid #f1f3f4;
+                                background: white;
+                            }
+
+                            .feature-name {
+                                display: block !important;
+                                text-align: left;
+                                font-weight: 500;
+                                padding: 0;
+                                border: none;
+                                font-size: 16px;
+                                color: #495057;
+                                flex: 1;
+                                margin-right: 15px;
+                                line-height: 1.4;
+                                word-wrap: break-word;
+                                word-break: break-word;
+                                hyphens: auto;
+                                overflow-wrap: break-word;
+                            }
+
+                            .feature-value {
+                                display: none;
+                                padding: 0;
+                                background: none;
+                                border: none;
+                                font-size: 16px;
+                                font-weight: 500;
+                                color: #495057;
+                                text-align: right;
+                                min-width: auto;
+                                margin: 0;
+                                flex-shrink: 0;
+                                word-wrap: break-word;
+                                word-break: break-word;
+                                hyphens: auto;
+                                overflow-wrap: break-word;
+                                line-height: 1.4;
+                            }
+
+                            /* Show first feature value by default (Personal plan) */
+                            .feature-value:first-of-type {
+                                display: block !important;
+                            }
+
+                            .feature-check {
+                                background-color: #28a745;
+                                color: white;
+                                border-radius: 50%;
+                                width: 24px;
+                                height: 24px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 12px;
+                            }
+
+                            /* Hide the before content for mobile */
+                            .feature-value:nth-child(2)::before,
+                            .feature-value:nth-child(3)::before {
+                                display: none;
+                            }
+                        }
+
+                        /* Extra Small Mobile (up to 400px) */
+                        @media (max-width: 400px) {
+                            .pricing-comparison-section {
+                                padding: 15px 0;
+                            }
+
+                            .pricing-table-container {
+                                margin: 0 5px;
+                            }
+
+                            .toggle-btn {
+                                padding: 6px 12px;
+                                font-size: 11px;
+                                min-width: 60px;
+                            }
+
+                            .plan-column {
+                                padding: 12px 5px;
+                            }
+
+                            .plan-title {
+                                font-size: 16px;
+                                margin-bottom: 6px;
+                            }
+
+                            .price-amount {
+                                font-size: 20px;
+                            }
+
+                            .price-period {
+                                font-size: 10px;
+                            }
+
+                            .section-title {
+                                padding: 15px 10px;
+                                font-size: 16px;
+                            }
+
+                            .feature-row {
+                                padding: 15px 10px;
+                            }
+
+                            .feature-name {
+                                font-size: 14px;
+                                margin-right: 10px;
+                            }
+
+                            .mobile-tab {
+                                padding: 15px;
+                            }
+
+                            .tab-title {
+                                font-size: 16px;
+                            }
+
+                            .tab-price {
+                                font-size: 12px;
+                            }
+
+                            .feature-value {
+                                font-size: 14px;
+                            }
+
+                            .feature-check {
+                                width: 20px;
+                                height: 20px;
+                                font-size: 10px;
+                            }
+                        }
+                    </style>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const toggleBtns = document.querySelectorAll('.toggle-btn');
+                            const yearlyPrices = document.querySelectorAll('.yearly-price');
+                            const monthlyPrices = document.querySelectorAll('.monthly-price');
+                            const yearlyPeriods = document.querySelectorAll('.yearly-period');
+                            const monthlyPeriods = document.querySelectorAll('.monthly-period');
+                            const mobileYearlyPrices = document.querySelectorAll('.mobile-yearly-price');
+                            const mobileMonthlyPrices = document.querySelectorAll('.mobile-monthly-price');
+
+                            toggleBtns.forEach(btn => {
+                                btn.addEventListener('click', function () {
+                                    // Remove active class from all buttons
+                                    toggleBtns.forEach(b => b.classList.remove('active'));
+                                    // Add active class to clicked button
+                                    this.classList.add('active');
+
+                                    const period = this.dataset.period;
+
+                                    if (period === 'yearly') {
+                                        // Desktop pricing
+                                        yearlyPrices.forEach(price => price.style.display = 'inline');
+                                        monthlyPrices.forEach(price => price.style.display = 'none');
+                                        yearlyPeriods.forEach(period => period.style.display = 'inline');
+                                        monthlyPeriods.forEach(period => period.style.display = 'none');
+
+                                        // Mobile pricing
+                                        mobileYearlyPrices.forEach(price => price.style.display = 'inline');
+                                        mobileMonthlyPrices.forEach(price => price.style.display = 'none');
+                                    } else {
+                                        // Desktop pricing
+                                        yearlyPrices.forEach(price => price.style.display = 'none');
+                                        monthlyPrices.forEach(price => price.style.display = 'inline');
+                                        yearlyPeriods.forEach(period => period.style.display = 'none');
+                                        monthlyPeriods.forEach(period => period.style.display = 'inline');
+
+                                        // Mobile pricing
+                                        mobileYearlyPrices.forEach(price => price.style.display = 'none');
+                                        mobileMonthlyPrices.forEach(price => price.style.display = 'inline');
+                                    }
+                                });
+                            });
+
+                            // Mobile Plan Tab Functionality
+                            const mobileTabs = document.querySelectorAll('.mobile-tab');
+                            const featureRows = document.querySelectorAll('.feature-row');
+
+                            mobileTabs.forEach(tab => {
+                                tab.addEventListener('click', function () {
+                                    // Remove active class from all tabs
+                                    mobileTabs.forEach(t => t.classList.remove('active'));
+                                    // Add active class to clicked tab
+                                    this.classList.add('active');
+
+                                    const selectedPlan = this.dataset.plan;
+
+                                    // Hide all feature values
+                                    featureRows.forEach(row => {
+                                        const values = row.querySelectorAll('.feature-value');
+                                        values.forEach(value => {
+                                            value.style.display = 'none';
+                                        });
+
+                                        // Show the selected plan's values
+                                        if (selectedPlan === 'personal' && values[0]) {
+                                            values[0].style.display = 'block'; // First column (Personal)
+                                        } else if (selectedPlan === 'pro' && values[1]) {
+                                            values[1].style.display = 'block'; // Second column (Pro)
+                                        } else if (selectedPlan === 'enterprise' && values[2]) {
+                                            values[2].style.display = 'block'; // Third column (Enterprise)
+                                        }
+                                    });
+                                });
+                            });
+
+                            // Initialize mobile view with Personal plan active
+                            function initializeMobileView() {
+                                if (window.innerWidth <= 575) {
+                                    featureRows.forEach(row => {
+                                        const values = row.querySelectorAll('.feature-value');
+                                        values.forEach(value => value.style.display = 'none');
+                                        if (values[0]) values[0].style.display = 'block'; // Show Personal plan
+                                    });
+                                }
+                            }
+
+                            // Initialize on load and resize
+                            initializeMobileView();
+                            window.addEventListener('resize', initializeMobileView);
+                        });
+                    </script>
+
+
+                    <!-- Start Accordion Area -->
+                    <div class="rainbow-accordion-area rainbow-section-gap ">
+                        <div class="container">
+                            <div class="row justify-content-between">
+                                <div class="col-lg-12 col-xl-4 col-12">
+                                    <div class="split-inner">
+                                        <h2 class="title sal-animate" data-sal="slide-up" data-sal-duration="400"
+                                            data-sal-delay="200">
+                                            Frequently Asked Questions</h2>
+                                        <p class="description sal-animate" data-sal="slide-up" data-sal-duration="400"
+                                            data-sal-delay="300">
+                                            Don't find your answer here? just send us a message for any query.</p>
+                                        <div>
+                                            <a class="rainbow-gradient-btn without-shape bg-light"
+                                                href="contact.html"><span>Contact
+                                                    us</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-7 col-12 mt-5">
+                                    <div class="rainbow-accordion-style rainbow-accordion-02 accordion">
+                                        <div class="accordion" id="accordionExampleb">
+                                            <div class="accordion-item card">
+                                                <h2 class="accordion-header card-header" id="headingFive">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                        aria-expanded="true" aria-controls="collapseFive">
+                                                        How does AktionAI capture tasks from meetings?
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseFive" class="accordion-collapse collapse show"
+                                                    aria-labelledby="headingFive" data-bs-parent="#accordionExampleb">
+                                                    <div class="accordion-body card-body">
+                                                        AktionAI automatically transcribes meetings, extracts key
+                                                        points, and converts them
+                                                        into tasks. It works with Zoom, Teams, Google Meet and Offline
+                                                        meetings for seamless
+                                                        processing.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item card">
+                                                <h2 class="accordion-header card-header" id="headingSix">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                                        aria-expanded="false" aria-controls="collapseSix">
+                                                        Can I edit or remove AI-generated tasks?
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseSix" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingSix" data-bs-parent="#accordionExampleb">
+                                                    <div class="accordion-body card-body">
+                                                        Yes! You can modify, reassign, or delete any task before
+                                                        finalizing. AktionAI
+                                                        ensures full control, so tasks always align with your workflow.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item card">
+                                                <h2 class="accordion-header card-header" id="headingSeven">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                                                        aria-expanded="false" aria-controls="collapseSeven">
+                                                        Does AktionAI work with my current tools?
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseSeven" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingSeven" data-bs-parent="#accordionExampleb">
+                                                    <div class="accordion-body card-body">
+                                                        Absolutely! It integrates with Jira, Asana, Trello, Optimore and
+                                                        more,
+                                                        keeping all your tasks
+                                                        in sync. No need to switch between platforms.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item card">
+                                                <h2 class="accordion-header card-header" id="headingEight">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                                                        aria-expanded="false" aria-controls="collapseEight">
+                                                        Is my data secure with AktionAI?
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseEight" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingEight" data-bs-parent="#accordionExampleb">
+                                                    <div class="accordion-body card-body">
+                                                        Yes! AktionAI follows GDPR, HIPAA, and enterprise-grade security
+                                                        protocols. Your
+                                                        data is encrypted and protected at all times.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item card">
+                                                <h2 class="accordion-header card-header" id="headingNine">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseNine"
+                                                        aria-expanded="false" aria-controls="collapseNine">
+                                                        Can multiple team members collaborate in AktionAI?
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseNine" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingNine" data-bs-parent="#accordionExampleb">
+                                                    <div class="accordion-body card-body">
+                                                        Of course! Teams can view, assign, and manage tasks in
+                                                        real-time, ensuring smooth
+                                                        collaboration across locations and time zones.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item card">
+                                                <h2 class="accordion-header card-header" id="headingTen">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseTen"
+                                                        aria-expanded="false" aria-controls="collapseTen">
+                                                        What's the cost of using AktionAI?
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseTen" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingTen" data-bs-parent="#accordionExampleb">
+                                                    <div class="accordion-body card-body">
+                                                        We offer flexible pricing plans based on your team's needs.
+                                                        Contact us to get a
+                                                        custom quote that fits your business.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Start Footer Area  -->
+        <footer class="rainbow-footer footer-style-default footer-style-3 position-relative">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img class="logo-light" src="assets/images/logo/logo.png" alt="ChatBot Logo">
+                                        <img class="logo-dark" src="assets/images/logo/logo.png" alt="ChatBot Logo">
+                                    </a>
+                                </div>
+                                <p class="b1 desc-text">Efficient Translation, Meetings & Task Management</p>
+
+                                <h4 class="subtitle-new">Download Our App</h4>
+                                <div class="app-store-buttons">
+                                    <a href="https://play.google.com/store/apps/details?id=com.bct.aktionairecorder&pcampaignid=web_share"
+                                        target="_blank" class="app-store-link">
+                                        <img src="assets/images/app-store/google-play.png" alt="Get it on Google Play"
+                                            class="store-badge">
+                                    </a>
+                                    <a href="javascript:void(0)" class="app-store-link">
+                                        <img src="assets/images/app-store/app-store.png" alt="Download on the App Store"
+                                            class="store-badge">
+                                        <span class="tooltip">Coming Soon!</span>
+                                    </a>
+                                </div>
+
+                                <h4 class="subtitle-new mt-4">Socials </h4>
+
+                                <div class="social-icons">
+
+                                    <a href="https://www.facebook.com/aktionai" target="_blank" aria-label="Facebook">
+                                        <!-- Facebook SVG Icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="800px"
+                                            height="800px" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z" />
+                                        </svg>
+                                    </a>
+                                    <!-- <a href="https://x.com/bluecoppertech?t=zVnRLZKMNNInncUaqoK-mA&s=09" target="_blank"
+                                        aria-label="Twitter">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                            viewBox="0 0 50 50">
+                                            <path
+                                                d="M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z">
+                                            </path>
+                                        </svg>
+                                    </a> -->
+                                    <a href="https://www.linkedin.com/showcase/aktion-ai-intelligent-meeting-agent/"
+                                        target="_blank" aria-label="LinkedIn">
+                                        <!-- LinkedIn SVG Icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                            viewBox="0 0 50 50">
+                                            <path
+                                                d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.instagram.com/aktionai/" target="_blank"
+                                        aria-label="Instagram">
+                                        <!-- Instagram SVG Icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 64 64"
+                                            width="64px" height="64px">
+                                            <path
+                                                d="M 21.580078 7 C 13.541078 7 7 13.544938 7 21.585938 L 7 42.417969 C 7 50.457969 13.544938 57 21.585938 57 L 42.417969 57 C 50.457969 57 57 50.455062 57 42.414062 L 57 21.580078 C 57 13.541078 50.455062 7 42.414062 7 L 21.580078 7 z M 47 15 C 48.104 15 49 15.896 49 17 C 49 18.104 48.104 19 47 19 C 45.896 19 45 18.104 45 17 C 45 15.896 45.896 15 47 15 z M 32 19 C 39.17 19 45 24.83 45 32 C 45 39.17 39.169 45 32 45 C 24.83 45 19 39.169 19 32 C 19 24.831 24.83 19 32 19 z M 32 23 C 27.029 23 23 27.029 23 32 C 23 36.971 27.029 41 32 41 C 36.971 41 41 36.971 41 32 C 41 27.029 36.971 23 32 23 z" />
+                                        </svg>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="widget-menu-bottom">
+                                    <h4 class="subtitle-new">Quick Links</h4>
+                                    <div class="inner">
+                                        <ul class="footer-link link-hover">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="integrations.html">Integrations</a></li>
+                                            <li><a href="company.html">Company</a></li>
+                                            <li><a href="partnership.html">Partnership</a></li>
+                                            <li><a href="pricing.html">Pricing</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="widget-menu-top">
+                                    <h4 class="subtitle-new">Address</h4>
+                                    <div class="inner contact-div ">
+
+                                        <ul class="footer-link contact-link">
+                                            <li><i class="contact-icon fa-regular fa-location-dot"></i><a
+                                                    target="_blank"
+                                                    href="https://www.google.com/maps/place/Ecospace+Business+Park/@22.5858076,88.4874246,17z/data=!3m1!4b1!4m6!3m5!1s0x3a020ac6499c8499:0x17c545e20b241d8d!8m2!3d22.5858027!4d88.4899995!16s%2Fg%2F1hc1jr17q?entry=ttu&g_ep=EgoyMDI0MDkyNC4wIKXMDSoASAFQAw%3D%3D">Ecospace
+                                                    Business Park, Newtown, Kolkata , India
+                                                </a></li>
+                                            <li><i class="contact-icon fa-regular fa-location-dot"></i><a
+                                                    target="_blank"
+                                                    href="https://www.google.com/maps/place/Super+Mart+1,+Dlf+Phase+4/@28.4624669,77.0847776,17z/data=!4m10!1m2!2m1!1sOffice+No.+C-062d,+Super+Mart-1,+DLF+Phase+-+4,+Gurugram,+Haryana+122009,+India.!3m6!1s0x390d18d951c8c715:0x7bd03ee1a03a14e0!8m2!3d28.4624409!4d77.0869111!15sClBPZmZpY2UgTm8uIEMtMDYyZCwgU3VwZXIgTWFydC0xLCBETEYgUGhhc2UgLSA0LCBHdXJ1Z3JhbSwgSGFyeWFuYSAxMjIwMDksIEluZGlhLlpJIkdvZmZpY2Ugbm8gYyAwNjJkIHN1cGVyIG1hcnQgMSBkbGYgcGhhc2UgNCBndXJ1Z3JhbSBoYXJ5YW5hIDEyMjAwOSBpbmRpYZIBDWdyb2Nlcnlfc3RvcmXgAQA!16s%2Fg%2F11h7rr32hh?entry=ttu&g_ep=EgoyMDI0MDkyNC4wIKXMDSoASAFQAw%3D%3D">
+                                                    Delhi-NCR: Super Mart-1, Gurugram, India
+
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="widget-menu-top">
+                                    <h4 class="subtitle-new">Contact</h4>
+                                    <div class="inner contact-div ">
+                                        <ul class="footer-link contact-link">
+                                            <li><i class="contact-icon fa-sharp fa-regular fa-envelope"></i><a
+                                                    href="mailto:info@bluecoppertech.com">info@bluecoppertech.com</a>
+                                            </li>
+                                            <li><i class="contact-icon fa-sharp fa-regular fa-envelope"></i><a
+                                                    href="mailto:sales@bluecoppertech.com">sales@bluecoppertech.com</a>
+                                            </li>
+                                            <li><i class="contact-icon fa-regular fa-phone"></i><a
+                                                    href="tel:+919903004242">+91-9903004242</a>
+                                            </li>
+                                            <li><i class="contact-icon fa-regular fa-phone"></i><a
+                                                    href="tel:+919903004344">+91-9903004344</a>
+                                            </li>
+                                        </ul>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="copyright-area copyright-style-one">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="copyright-left">
+                            <ul class="ft-menu link-hover d-flex flex-wrap">
+                                <li class="me-3">
+                                    <a href="contact.html">Contact Us</a>
+                                </li>
+                                <li class="me-3">
+                                    <a href="tos.html">Terms of Service</a>
+                                </li>
+                                <li class="me-3">
+                                    <a href="privacy.html">Privacy Policy</a>
+                                </li>
+                                <li class="me-3">
+                                    <a href="cancellation.html">Cancellation and Refund Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="copyright-center text-center">
+                            <p class="copyright-text mb-0">Copyright © 2025 AktionAI
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 text-lg-end text-md-end text-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <span class="text-white me-2" style="font-size: 1rem;">Product by</span>
+                            <a href="https://bluecoppertech.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/images/logo/BCT.png" alt="bluecoppertech"
+                                    class="bluecopper-copyright-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JS -->
+    <script src="assets/js/vendor/modernizr.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/jquery.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/bootstrap.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/waypoint.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/wow.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/counterup.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/sal.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/slick.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/text-type.js?v=1742280107"></script>
+    <script src="assets/js/vendor/prism.js?v=1742280107"></script>
+    <script src="assets/js/vendor/bootstrap-select.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/backto-top.js?v=1742280107"></script>
+    <!-- Light Mode Switcher -->
+    <script src="assets/js/vendor/js.cookie.js?v=1742280107"></script>
+    <script src="assets/js/vendor/jquery.style.swicher.js?v=1742280107"></script>
+
+    <script src="assets/js/vendor/jquery-one-page-nav.js?v=1742280107"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js?v=1742280107"></script>
+
+    <!-- Add custom script for price card highlighting -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const basicCard = document.querySelector('.opti_price_card:first-child');
+            const premierCard = document.querySelector('.opti_price_card_premier');
+            const enterpriseCard = document.querySelector('.opti_price_card:last-child');
+
+            // Function to toggle the premier class (highlight selected card)
+            function togglePremierClass(clickedCard) {
+                // Remove premier class from all cards
+                basicCard.classList.remove('opti_price_card_premier');
+                premierCard.classList.remove('opti_price_card_premier');
+                enterpriseCard.classList.remove('opti_price_card_premier');
+
+                // Add premier class to clicked card
+                clickedCard.classList.add('opti_price_card_premier');
+            }
+
+            // Add click event listeners to all cards
+            basicCard.addEventListener('click', function () {
+                togglePremierClass(this);
+            });
+
+            premierCard.addEventListener('click', function () {
+                togglePremierClass(this);
+            });
+
+            enterpriseCard.addEventListener('click', function () {
+                togglePremierClass(this);
+            });
+        });
+    </script>
+</body>
+
+</html>

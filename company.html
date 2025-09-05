@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-style-mode" content="1"> <!-- 0 == light, 1 == dark -->
+
+    <title>Company</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/favicon.png">
+    <!-- CSS ============================================ -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome-all.min.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/feature.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/animation.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/slick.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/slick-theme.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap-select.min.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/plugins/prism.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/style.css?v=1742280107">
+    <link rel="stylesheet" href="assets/css/main.css?v=1742280107">
+    <style>
+        .app-store-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .app-store-link {
+            position: relative;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .app-store-link:hover {
+            transform: scale(1.05);
+        }
+
+        .store-badge {
+            height: 45px;
+            width: auto;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            margin-bottom: 5px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+        .app-store-link:hover .tooltip,
+        .app-store-link:active .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page-wrapper">
+        <!-- End Header Top Area  -->
+
+
+        <nav class="aktion-navbar">
+            <div class="aktion-navbar-container">
+                <a href="index.html" class="aktion-logo">
+                    <img src="assets/images/logo/Aktion-AI-logo-TM.png" alt="Aktion AI">
+                </a>
+
+                <button class="aktion-mobile-toggle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <ul class="aktion-nav-links">
+                    <li class="aktion-nav-item">
+                        <a href="index.html" class="aktion-nav-link ">Home</a>
+                    </li>
+                    <li class="aktion-nav-item">
+                        <a href="integrations.html" class="aktion-nav-link">Integrations</a>
+                    </li>
+                    <li class="aktion-nav-item">
+                        <a href="company.html" class="aktion-nav-link active">Company</a>
+                    </li>
+                    <li class="aktion-nav-item">
+                        <a href="partnership.html" class="aktion-nav-link">Partnership</a>
+                    </li>
+
+                    <li class="aktion-nav-item">
+                        <a href="pricing.html" class="aktion-nav-link">Pricing</a>
+                    </li>
+                </ul>
+
+                <a href="/contact.html" class=" aktion-demo-btn">
+                    Schedule a demo
+                    <span class="aktion-phone-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </a>
+                <button class="aktion-mobile-toggle-1">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="nav-height"></div>
+        <div class="nav-height"></div>
+        <!-- Sidebar -->
+        <div class="aktion-sidebar">
+            <div class="aktion-sidebar-header">
+                <a href="/" class="aktion-logo">
+                    <img src="assets/images/logo/Aktion-AI-logo-TM.png" alt="Aktion AI">
+                </a>
+                <button class="aktion-sidebar-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="aktion-nav-links">
+                <li class="aktion-nav-item">
+                    <a href="/" class="aktion-nav-link ">Home</a>
+                </li>
+                <li class="aktion-nav-item">
+                    <a href="/partnership.html" class="aktion-nav-link">Partnership</a>
+                </li>
+                <li class="aktion-nav-item">
+                    <a href="/integrations.html" class="aktion-nav-link">Integrations</a>
+                </li>
+                <li class="aktion-nav-item">
+                    <a href="/company.html" class="aktion-nav-link active">Company</a>
+                </li>
+                <li class="aktion-nav-item">
+                    <a href="/pricing.html" class="aktion-nav-link">Pricing</a>
+                </li>
+            </ul>
+            <a href="/contact.html" class=" d-sm-none d-md-block aktion-demo-btn">
+                Schedule a demo
+                <span class="aktion-phone-icon">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </span>
+            </a>
+        </div>
+        <div class="aktion-overlay">
+        </div>
+
+        <!-- Imroz Preloader -->
+        <div class="preloader">
+            <div class='loader'>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+            </div>
+        </div>
+
+        <!-- Start Breadcrumb Area  -->
+        <div class="main-content ">
+            <!-- Start Breadcarumb area  -->
+            <div class="breadcrumb-bp  pt--50 pb--50">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="breadcrumb-inner text-center">
+                                <h3 class="title h3">Our Company</h3>
+                                <!-- <ul class="page-list">
+                                    <li class="rainbow-breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="rainbow-breadcrumb-item active">Our Company</li>
+                                </ul> -->
+                                <p class="mt-5 bc-desc">Blue Copper Technologies combines software engineering with AI,
+                                    ML, AR,
+                                    VR, and IIoT,
+                                    ensuring quality through ISO
+                                    9001:2008 and ISO 27001:2013 certifications.
+                                    We deliver IP-driven solutions across Telecom, Fintech, EduTech, Manufacturing,
+                                    Logistics, e-Commerce, and Automobile.
+
+                                    Serving global clients in the USA, Middle East, and India, we’ve delivered 150+
+                                    solutions, leveraging AI-driven SDLC for
+                                    innovative, future-ready results</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Breadcarumb area  -->
+        </div>
+
+        <div class="rbt-team-area mt-5 pt-5 pb--50">
+            <div class="container">
+                <div class="row row--15 mt_dec--30">
+                    <!-- Start Single Team  -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
+                        <div class="team">
+                            <div class="thumbnail"><img src="assets/images/team/arg.png" alt="Team Images">
+                            </div>
+                            <div class="content">
+                                <h4 class="title">ARUNABHA GHOSH</h4>
+                                <p class="designation">FOUNDER & CEO</p>
+                            </div>
+                            <ul class="social-icon">
+                                <!-- <li><a href="#"><i class="fab fa-facebook-f"></i></a></li> -->
+                                <li><a href="https://www.linkedin.com/in/argindia/" target="_blank"><i
+                                            class="fab fa-linkedin-in"></i></a></li>
+                                <!-- <li><a href="#"><i class="fab fa-twitter"></i></a></li> -->
+                            </ul>
+                            <!-- <div class="card-mobile-content">
+                                <div class="content">
+                                    <h4 class="title">ARUNABHA GHOSH</h4>
+                                    <p class="designation">FOUNDER & CEO</p>
+                                </div>
+                                <ul class="social-icon">
+                                    <li><a href="https://www.linkedin.com/in/argindia/"><i
+                                                class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- End Single Team  -->
+
+                    <!-- Start Single Team  -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
+                        <div class="team">
+                            <div class="thumbnail"><img src="assets/images/team/abg.png" alt="Team Images">
+                            </div>
+                            <div class="content">
+                                <h4 class="title">Abhisek Ghosh</h4>
+                                <p class="designation">FOUNDER & CTO</p>
+                            </div>
+                            <ul class="social-icon">
+                                <!-- <li><a href="#"><i class="fab fa-facebook-f"></i></a></li> -->
+                                <li><a href="https://www.linkedin.com/in/abghosh/" target="_blank"><i
+                                            class="fab fa-linkedin-in"></i></a></li>
+                                <!-- <li><a href="#"><i class="fab fa-twitter"></i></a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Single Team  -->
+
+                    <!-- Start Single Team  -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
+                        <div class="team">
+                            <div class="thumbnail"><img src="assets/images/team/abhijit-chakrabarty-3.png"
+                                    alt="Team Images">
+                            </div>
+                            <div class="content">
+                                <h4 class="title">Abhijit Chakrabarti</h4>
+                                <p class="designation">Principal Consultant</p>
+                            </div>
+                            <ul class="social-icon">
+                                <!-- <li><a href="#"><i class="fab fa-facebook-f"></i></a></li> -->
+                                <li><a href="https://www.linkedin.com/in/abhijit-chakrabarti-7b4aaa42/"
+                                        target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                <!-- <li><a href="#"><i class="fab fa-twitter"></i></a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Sumit Dey -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
+                        <div class="team">
+                            <div class="thumbnail"><img src="assets/images/team/sumit.jpg" alt="Team Images">
+                            </div>
+                            <div class="content">
+                                <h4 class="title">Sumit Dey</h4>
+                                <p class="designation">Growth Orchestrator</p>
+                            </div>
+                            <ul class="social-icon">
+                                <li><a href="https://www.linkedin.com/in/sumit-dey-11640a7/" target="_blank"><i
+                                            class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Kumar Prasenjit -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
+                        <div class="team">
+                            <div class="thumbnail"><img src="assets/images/team/kp.png" alt="Team Images">
+                            </div>
+                            <div class="content">
+                                <h4 class="title">Kumar Prasenjit</h4>
+                                <p class="designation">GM - Technology</p>
+                            </div>
+                            <ul class="social-icon">
+                                <li><a href="https://www.linkedin.com/in/kumar-prasenjit/" target="_blank"><i
+                                            class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Abhirup Ghosh -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
+                        <div class="team">
+                            <div class="thumbnail"><img src="assets/images/team/ag.png" alt="Team Images">
+                            </div>
+                            <div class="content">
+                                <h4 class="title">Abhirup Ghosh</h4>
+                                <p class="designation">GM - Projects</p>
+                            </div>
+                            <ul class="social-icon">
+                                <li><a href="https://www.linkedin.com/in/abhirup-ghosh/" target="_blank"><i
+                                            class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Animesh Sarkar -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
+                        <div class="team">
+                            <div class="thumbnail"><img src="assets/images/team/as.png" alt="Team Images">
+                            </div>
+                            <div class="content">
+                                <h4 class="title">Animesh Sarkar</h4>
+                                <p class="designation">Solution Architect</p>
+                            </div>
+                            <ul class="social-icon">
+                                <li><a href="https://www.linkedin.com/in/animesh-sarkar-930a9024/" target="_blank"><i
+                                            class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Aparajita Sinha -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
+                        <div class="team">
+                            <div class="thumbnail"><img src="assets/images/team/aps.png" alt="Team Images">
+                            </div>
+                            <div class="content">
+                                <h4 class="title">Aparajita Sinha</h4>
+                                <p class="designation">Project Manager</p>
+                            </div>
+                            <ul class="social-icon">
+                                <li><a href="https://www.linkedin.com/in/aparajita-sinha-bb869468/" target="_blank"><i
+                                            class="fab fa-linkedin-in"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Pampa Das -->
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
+                        <div class="team">
+                            <div class="thumbnail"><img src="assets/images/team/pd.png" alt="Team Images">
+                            </div>
+                            <div class="content">
+                                <h4 class="title">Pampa Das</h4>
+                                <p class="designation">Manager, Operations</p>
+                            </div>
+                            <ul class="social-icon">
+                                <li><a href="https://www.linkedin.com/in/pampa-das-901b8556/" target="_blank"><i
+                                            class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Start Footer Area  -->
+        <footer class="rainbow-footer footer-style-default footer-style-3 position-relative">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img class="logo-light" src="assets/images/logo/logo.png" alt="ChatBot Logo">
+                                        <img class="logo-dark" src="assets/images/logo/logo.png" alt="ChatBot Logo">
+                                    </a>
+                                </div>
+                                <p class="b1 desc-text">Efficient Translation, Meetings & Task Management</p>
+                                <!-- <h6 class="subtitle">Join our Newsletter</h6>
+                                        <form class="newsletter-form" action="#">
+                                            <div class="form-group">
+                                                <input type="email" placeholder="Enter Your Email Here">
+                                                <button class="btn-default bg-solid-primary" type="submit"><i
+                                                        class="fa-sharp fa-regular fa-arrow-right"></i></button>
+                                            </div>
+                                        </form> -->
+                                <h4 class="subtitle-new">Download Our App</h4>
+                                <div class="app-store-buttons">
+                                    <a href="https://play.google.com/store/apps/details?id=com.bct.aktionairecorder&pcampaignid=web_share" target="_blank"
+                                        class="app-store-link">
+                                        <img src="assets/images/app-store/google-play.png" alt="Get it on Google Play"
+                                            class="store-badge">
+                                    </a>
+                                    <a href="javascript:void(0)" class="app-store-link">
+                                        <img src="assets/images/app-store/app-store.png" alt="Download on the App Store"
+                                            class="store-badge">
+                                        <span class="tooltip">Coming Soon!</span>
+                                    </a>
+                                </div>       
+                                <h4 class="subtitle-new mt-4">Socials </h4>
+
+                                <div class="social-icons">
+
+                                    <a href="https://www.facebook.com/aktionai" target="_blank"
+                                        aria-label="Facebook">
+                                        <!-- Facebook SVG Icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="800px"
+                                            height="800px" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z" />
+                                        </svg>
+                                    </a>
+                                    <!-- <a href="https://x.com/bluecoppertech?t=zVnRLZKMNNInncUaqoK-mA&s=09" target="_blank"
+                                        aria-label="Twitter">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                            viewBox="0 0 50 50">
+                                            <path
+                                                d="M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z">
+                                            </path>
+                                        </svg>
+                                    </a> -->
+                                    <a href="https://www.linkedin.com/showcase/aktion-ai-intelligent-meeting-agent/" target="_blank"
+                                        aria-label="LinkedIn">
+                                        <!-- LinkedIn SVG Icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                            viewBox="0 0 50 50">
+                                            <path
+                                                d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.instagram.com/aktionai/" target="_blank" aria-label="Instagram">
+                                        <!-- Instagram SVG Icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 64 64"
+                                            width="64px" height="64px">
+                                            <path
+                                                d="M 21.580078 7 C 13.541078 7 7 13.544938 7 21.585938 L 7 42.417969 C 7 50.457969 13.544938 57 21.585938 57 L 42.417969 57 C 50.457969 57 57 50.455062 57 42.414062 L 57 21.580078 C 57 13.541078 50.455062 7 42.414062 7 L 21.580078 7 z M 47 15 C 48.104 15 49 15.896 49 17 C 49 18.104 48.104 19 47 19 C 45.896 19 45 18.104 45 17 C 45 15.896 45.896 15 47 15 z M 32 19 C 39.17 19 45 24.83 45 32 C 45 39.17 39.169 45 32 45 C 24.83 45 19 39.169 19 32 C 19 24.831 24.83 19 32 19 z M 32 23 C 27.029 23 23 27.029 23 32 C 23 36.971 27.029 41 32 41 C 36.971 41 41 36.971 41 32 C 41 27.029 36.971 23 32 23 z" />
+                                        </svg>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="widget-menu-bottom">
+                                    <h4 class="subtitle-new">Quick Links</h4>
+                                    <div class="inner">
+                                        <ul class="footer-link link-hover">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="integrations.html">Integrations</a></li>
+                                            <li><a href="company.html">Company</a></li>
+                                            <li><a href="partnership.html">Partnership</a></li>
+                                            <li><a href="pricing.html">Pricing</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="widget-menu-top">
+                                    <h4 class="subtitle-new">Address</h4>
+                                    <div class="inner contact-div ">
+
+                                        <ul class="footer-link contact-link">
+                                            <li><i class="contact-icon fa-regular fa-location-dot"></i><a
+                                                    target="_blank"
+                                                    href="https://www.google.com/maps/place/Ecospace+Business+Park/@22.5858076,88.4874246,17z/data=!3m1!4b1!4m6!3m5!1s0x3a020ac6499c8499:0x17c545e20b241d8d!8m2!3d22.5858027!4d88.4899995!16s%2Fg%2F1hc1jr17q?entry=ttu&g_ep=EgoyMDI0MDkyNC4wIKXMDSoASAFQAw%3D%3D">Ecospace
+                                                    Business Park, Newtown, Kolkata , India
+                                                </a></li>
+                                            <li><i class="contact-icon fa-regular fa-location-dot"></i><a
+                                                    target="_blank"
+                                                    href="https://www.google.com/maps/place/Super+Mart+1,+Dlf+Phase+4/@28.4624669,77.0847776,17z/data=!4m10!1m2!2m1!1sOffice+No.+C-062d,+Super+Mart-1,+DLF+Phase+-+4,+Gurugram,+Haryana+122009,+India.!3m6!1s0x390d18d951c8c715:0x7bd03ee1a03a14e0!8m2!3d28.4624409!4d77.0869111!15sClBPZmZpY2UgTm8uIEMtMDYyZCwgU3VwZXIgTWFydC0xLCBETEYgUGhhc2UgLSA0LCBHdXJ1Z3JhbSwgSGFyeWFuYSAxMjIwMDksIEluZGlhLlpJIkdvZmZpY2Ugbm8gYyAwNjJkIHN1cGVyIG1hcnQgMSBkbGYgcGhhc2UgNCBndXJ1Z3JhbSBoYXJ5YW5hIDEyMjAwOSBpbmRpYZIBDWdyb2Nlcnlfc3RvcmXgAQA!16s%2Fg%2F11h7rr32hh?entry=ttu&g_ep=EgoyMDI0MDkyNC4wIKXMDSoASAFQAw%3D%3D">
+                                                    Delhi-NCR: Super Mart-1, Gurugram, India
+
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="rainbow-footer-widget">
+                                <div class="widget-menu-top">
+                                    <h4 class="subtitle-new">Contact</h4>
+                                    <div class="inner contact-div ">
+                                        <ul class="footer-link contact-link">
+                                            <li><i class="contact-icon fa-sharp fa-regular fa-envelope"></i><a
+                                                    href="mailto:info@bluecoppertech.com">info@bluecoppertech.com</a>
+                                            </li>
+                                            <li><i class="contact-icon fa-sharp fa-regular fa-envelope"></i><a
+                                                    href="mailto:sales@bluecoppertech.com">sales@bluecoppertech.com</a>
+                                            </li>
+                                            <li><i class="contact-icon fa-regular fa-phone"></i><a
+                                                    href="tel:+919903004242">+91-9903004242</a>
+                                            </li>
+                                            <li><i class="contact-icon fa-regular fa-phone"></i><a
+                                                    href="tel:+919903004344">+91-9903004344</a>
+                                            </li>
+                                        </ul>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="copyright-area copyright-style-one">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="copyright-left">
+                            <ul class="ft-menu link-hover d-flex flex-wrap">
+                                <li class="me-3">
+                                    <a href="contact.html">Contact Us</a>
+                                </li>
+                                <li class="me-3">
+                                    <a href="tos.html">Terms of Service</a>
+                                </li>
+                                <li class="me-3">
+                                    <a href="privacy.html">Privacy Policy</a>
+                                </li>
+                                <li class="me-3">
+                                    <a href="cancellation.html">Cancellation and Refund Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="copyright-center text-center">
+                            <p class="copyright-text mb-0">Copyright © 2025 AktionAI
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 text-lg-end text-md-end text-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <span class="text-white me-2" style="font-size: 1rem;">Product by</span>
+                            <a href="https://bluecoppertech.com/" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/images/logo/BCT.png" alt="bluecoppertech" class="bluecopper-copyright-img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rbt-progress-parent">
+            <svg class="rbt-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+    </main>
+
+
+
+    <!-- JS
+============================================ -->
+    <script src="assets/js/vendor/modernizr.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/jquery.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/bootstrap.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/waypoint.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/wow.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/counterup.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/sal.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/slick.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/text-type.js?v=1742280107"></script>
+    <script src="assets/js/vendor/prism.js?v=1742280107"></script>
+    <script src="assets/js/vendor/bootstrap-select.min.js?v=1742280107"></script>
+    <script src="assets/js/vendor/backto-top.js?v=1742280107"></script>
+    <!-- Light Mode Switcher -->
+    <script src="assets/js/vendor/js.cookie.js?v=1742280107"></script>
+    <script src="assets/js/vendor/jquery.style.swicher.js?v=1742280107"></script>
+
+    <script src="assets/js/vendor/jquery-one-page-nav.js?v=1742280107"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js?v=1742280107"></script>
+        <!-- Add custom script for price card highlighting -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const premierCard = document.querySelector('.opti_price_card_premier');
+            const enterpriseCard = document.querySelector('.opti_price_card:last-child');
+
+            // Function to toggle the premier class
+            function togglePremierClass(clickedCard) {
+                // Remove class from both cards
+                premierCard.classList.remove('opti_price_card_premier');
+                enterpriseCard.classList.remove('opti_price_card_premier');
+
+                // Add class to clicked card
+                clickedCard.classList.add('opti_price_card_premier');
+            }
+
+            // Add click event listeners to both cards
+            premierCard.addEventListener('click', function () {
+                togglePremierClass(this);
+            });
+
+            enterpriseCard.addEventListener('click', function () {
+                togglePremierClass(this);
+            });
+        });
+    </script>
+</body>
+
+</html>
