@@ -4762,3 +4762,135 @@ input {
     font-size: 28px;
   }
 }
+
+/* Auto-sliding Images */
+.image-slider {
+  width: 620px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.image-track {
+  display: flex;
+  width: calc(300px * 6);
+  animation: autoSlide 18s infinite linear;
+}
+
+.image-slide {
+  width: 300px;
+  height: 600px;
+  margin-right: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.image-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes autoSlide {
+  0% {
+    transform: translateX(0);
+  }
+  16.66% {
+    transform: translateX(-320px);
+  }
+  33.33% {
+    transform: translateX(-640px);
+  }
+  50% {
+    transform: translateX(-960px);
+  }
+  66.66% {
+    transform: translateX(-1280px);
+  }
+  83.33% {
+    transform: translateX(-1600px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .transcript-hero {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .transcript-hero__title {
+    font-size: 2.5rem;
+  }
+
+  .text-secondary {
+    font-size: 1.1rem;
+  }
+
+  .transcript-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .image-slider {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+  }
+
+  .image-track {
+    width: calc(300px * 6);
+    animation: autoSlideMobile 18s infinite linear;
+  }
+
+  .image-slide {
+    width: 300px;
+    height: 400px;
+    margin-right: 0;
+  }
+
+  @keyframes autoSlideMobile {
+    0% {
+      transform: translateX(0);
+    }
+    16.66% {
+      transform: translateX(-300px);
+    }
+    33.33% {
+      transform: translateX(-600px);
+    }
+    50% {
+      transform: translateX(-900px);
+    }
+    66.66% {
+      transform: translateX(-1200px);
+    }
+    83.33% {
+      transform: translateX(-1500px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .transcript-hero__title {
+    font-size: 2rem;
+  }
+
+  .image-slider {
+    height: 350px;
+  }
+
+  .image-slide {
+    height: 350px;
+  }
+}
