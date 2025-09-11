@@ -61,6 +61,36 @@
         gtag('config', 'G-CGHY93WFY5');
     </script>
     <style>
+        .btn-download {
+            background-color: #EB1C2F;
+            color: white;
+            padding: 10px 30px;
+            font-size: 1.25rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-right: 10px;
+        }
+
+        .btn-download:hover {
+            background-color: red;
+            color: white;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .btn-download .fab {
+            margin-right: 10px;
+        }
+
+        .btn-download .fab.fa-apple {
+            color: #ffffff;
+        }
+
+        .btn-download .fab.fa-google-play {
+            color: #ffffff;
+        }
+
         .app-store-buttons {
             display: flex;
             gap: 10px;
@@ -120,6 +150,7 @@
 
     <style>
         .section-bg {
+            padding-top: 40px;
             background-image: url('assets/images/creatives/5075034_6970 1.png');
             /* padding: 60px 0; */
             background-size: cover;
@@ -135,11 +166,11 @@
 
         .c-hotels__title {
             width: min(1200px, 100%);
-            padding: 64px 20px;
+            padding: 20px 20px;
             color: #1E1E1E;
             text-align: center;
             font-weight: 700;
-            font-size: 30px;
+            font-size: 3.6rem;
         }
 
         .c-hotels__list {
@@ -723,71 +754,78 @@
 
     <style>
         .prod-app-cta-section {
-            background: #ffffff;
-            padding: 80px 0;
+
+            /* background: #f8f9fa; */
+            padding: 100px 20px;
             position: relative;
-            overflow: hidden;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        .prod-app-bg-pattern {
+        .prod-app-boxed-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #ff4757 0%, #ff3742 100%);
+            border-radius: 24px;
+            position: relative;
+            overflow: visible;
+            box-shadow: 0 20px 60px rgba(255, 71, 87, 0.2);
+        }
+
+        .prod-app-boxed-container::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background:
-                radial-gradient(circle at 20% 80%, rgba(255, 71, 87, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 71, 87, 0.05) 0%, transparent 50%);
-            z-index: 1;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+            border-radius: 24px;
         }
 
         .prod-app-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            padding: 40px 60px;
             position: relative;
             z-index: 2;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            display: flex;
             align-items: center;
         }
 
         .prod-app-content {
-            max-width: 500px;
+            max-width: 650px;
+            color: white;
+            width: 65%;
+            padding-right: 100px;
         }
 
         .prod-app-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255, 71, 87, 0.1);
-            color: #ff4757;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
             padding: 8px 16px;
             border-radius: 50px;
-            font-size: 0.85rem;
+            font-size: 1.4rem;
             font-weight: 600;
             margin-bottom: 24px;
-            border: 1px solid rgba(255, 71, 87, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
         }
 
         .prod-app-heading {
             font-size: 3.2rem;
             font-weight: 900;
             line-height: 1.1;
-            color: #1a1a1a;
+            color: white;
             margin-bottom: 20px;
-            background: linear-gradient(135deg, #1a1a1a 0%, #ff4757 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .prod-app-subheading {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             line-height: 1.6;
-            color: #666;
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 36px;
             font-weight: 400;
         }
@@ -806,7 +844,7 @@
             border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 1.5rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
@@ -815,63 +853,54 @@
         }
 
         .prod-app-btn-primary {
-            background: #ff4757;
-            color: white;
-            box-shadow: 0 4px 14px rgba(255, 71, 87, 0.3);
+            background: white;
+            color: #ff4757;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
         }
 
         .prod-app-btn-primary:hover {
-            background: #ff3742;
+            background: #f8f9fa;
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 71, 87, 0.4);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         .prod-app-btn-secondary {
-            background: #f8f9fa;
-            color: #666;
-            border: 2px solid #e9ecef;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
             cursor: not-allowed;
-            opacity: 0.7;
+            opacity: 0.8;
         }
 
         .prod-app-btn-secondary:hover {
-            background: #f1f3f4;
+            background: white;
         }
 
         .prod-app-phone-section {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .prod-app-phone-bg {
             position: absolute;
-            width: 400px;
-            height: 400px;
-            background: linear-gradient(135deg, #ff4757, #ff6b7a);
-            border-radius: 50%;
-            opacity: 0.1;
-            animation: prod-app-pulse 4s ease-in-out infinite;
+            right: 120px;
+            top: 55%;
+            transform: translateY(-50%);
+            z-index: 10;
         }
 
         .prod-app-phone-container {
             position: relative;
-            z-index: 3;
-            width: 300px;
-            height: 600px;
+            z-index: 10;
+            width: 260px;
+            height: 520px;
             background: #000;
             border-radius: 40px;
             padding: 8px;
             box-shadow:
                 0 0 0 8px rgba(0, 0, 0, 0.1),
-                0 30px 60px rgba(0, 0, 0, 0.3);
-            transform: rotate(8deg);
+                0 30px 60px rgba(0, 0, 0, 0.4);
+            transform: rotate(15deg);
             transition: transform 0.4s ease;
         }
 
         .prod-app-phone-container:hover {
-            transform: rotate(0deg) scale(1.02);
+            transform: rotate(10deg) scale(1.02);
         }
 
         .prod-app-phone-screen {
@@ -955,35 +984,30 @@
             font-size: 0.75rem;
         }
 
-        @keyframes prod-app-pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-                opacity: 0.1;
-            }
-
-            50% {
-                transform: scale(1.1);
-                opacity: 0.15;
-            }
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .prod-app-container {
-                grid-template-columns: 1fr;
-                gap: 50px;
+                flex-direction: column;
+                gap: 40px;
+                padding: 40px 30px;
                 text-align: center;
             }
 
             .prod-app-content {
                 max-width: none;
+                width: 100%;
                 order: 2;
+                padding-right: 0;
             }
 
             .prod-app-phone-section {
+                position: relative;
+                right: auto;
+                top: auto;
+                transform: none;
                 order: 1;
+                display: flex;
+                justify-content: center;
             }
 
             .prod-app-heading {
@@ -1005,13 +1029,21 @@
             }
 
             .prod-app-cta-section {
-                padding: 60px 0;
+                padding: 60px 20px;
+            }
+
+            .prod-app-buttons {
+                justify-content: center;
             }
         }
 
         @media (max-width: 480px) {
             .prod-app-heading {
                 font-size: 2rem;
+            }
+
+            .prod-app-container {
+                padding: 30px 20px;
             }
 
             .prod-app-buttons {
@@ -1032,7 +1064,7 @@
             }
 
             .prod-app-cta-section {
-                padding: 40px 0;
+                padding: 40px 15px;
             }
         }
     </style>
@@ -1073,6 +1105,13 @@
                         <a href="pricing.html" class="aktion-nav-link">Pricing</a>
                     </li>
                 </ul>
+
+
+                <button class="btn btn-download">
+                    <i class="fab fa-apple"></i>
+                    <i class="fab fa-google-play"></i>
+                    Download App
+                </button>
 
                 <a href="/contact.html" class=" aktion-demo-btn">
                     Schedule a demo
@@ -1165,7 +1204,11 @@
                     <!-- <li class="transcript-features__item">Sector Specific Vocabulary</li> -->
                 </ul>
                 <div class="transcript-cta">
-                    <a href="contact.html" class="transcript-cta__primary">Schedule demo</a>
+                    <button class="btn btn-download">
+                        <i class="fab fa-apple"></i>
+                        <i class="fab fa-google-play"></i>
+                        Download App
+                    </button>
                     <a href="https://app.aktionai.com" target="_blank" class="transcript-cta__secondary">
                         Sign in
                         <!-- <img src="https://cdn.brandfetch.io/idchmboHEZ/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B"
@@ -1310,62 +1353,61 @@
 
         <div class="prod-app-reset">
             <section class="prod-app-cta-section">
-                <div class="prod-app-bg-pattern"></div>
+                <div class="prod-app-boxed-container">
+                    <div class="prod-app-container">
+                        <div class="prod-app-content">
+                            <div class="prod-app-badge">
+                                ⚡ New Release
+                            </div>
 
-                <div class="prod-app-container">
-                    <div class="prod-app-content">
-                        <div class="prod-app-badge">
-                            ⚡ New Release
+                            <h1 class="prod-app-heading">Boost Your Team's Productivity!</h1>
+                            <p class="prod-app-subheading">Transform your workplace chaos into seamless productivity.
+                                Manage
+                                tasks, track progress, and collaborate like never before.</p>
+
+                            <div class="prod-app-buttons">
+                                <a href="#" class="prod-app-btn prod-app-btn-primary">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                                    </svg>
+                                    Download for Android
+                                </a>
+
+                                <a href="#" class="prod-app-btn prod-app-btn-secondary">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z" />
+                                    </svg>
+                                    Coming Soon
+                                </a>
+                            </div>
                         </div>
 
-                        <h1 class="prod-app-heading">Boost Your Team's Productivity!</h1>
-                        <p class="prod-app-subheading">Transform your workplace chaos into seamless productivity. Manage
-                            tasks,
-                            track progress, and collaborate like never before.</p>
+                        <div class="prod-app-phone-section">
+                            <div class="prod-app-phone-container">
+                                <div class="prod-app-phone-screen">
+                                    <div class="prod-app-notch"></div>
 
-                        <div class="prod-app-buttons">
-                            <a href="#" class="prod-app-btn prod-app-btn-primary">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
-                                </svg>
-                                Download for Android
-                            </a>
-
-                            <a href="#" class="prod-app-btn prod-app-btn-secondary">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z" />
-                                </svg>
-                                Coming Soon
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="prod-app-phone-section">
-                        <div class="prod-app-phone-bg"></div>
-                        <div class="prod-app-phone-container">
-                            <div class="prod-app-phone-screen">
-                                <div class="prod-app-notch"></div>
-
-                                <div class="prod-app-screen-header">
-                                    <div class="prod-app-app-icon">🚀</div>
-                                    <div class="prod-app-app-name">TaskFlow Pro</div>
-                                    <div class="prod-app-app-subtitle">Productivity Simplified</div>
-                                </div>
-
-                                <div class="prod-app-screen-cards">
-                                    <div class="prod-app-card">
-                                        <div class="prod-app-card-title">Daily Tasks</div>
-                                        <div class="prod-app-card-subtitle">8 tasks remaining</div>
+                                    <div class="prod-app-screen-header">
+                                        <div class="prod-app-app-icon">🚀</div>
+                                        <div class="prod-app-app-name">TaskFlow Pro</div>
+                                        <div class="prod-app-app-subtitle">Productivity Simplified</div>
                                     </div>
-                                    <div class="prod-app-card">
-                                        <div class="prod-app-card-title">Team Progress</div>
-                                        <div class="prod-app-card-subtitle">87% completed</div>
-                                    </div>
-                                    <div class="prod-app-card">
-                                        <div class="prod-app-card-title">Upcoming Deadlines</div>
-                                        <div class="prod-app-card-subtitle">3 projects due soon</div>
+
+                                    <div class="prod-app-screen-cards">
+                                        <div class="prod-app-card">
+                                            <div class="prod-app-card-title">Daily Tasks</div>
+                                            <div class="prod-app-card-subtitle">8 tasks remaining</div>
+                                        </div>
+                                        <div class="prod-app-card">
+                                            <div class="prod-app-card-title">Team Progress</div>
+                                            <div class="prod-app-card-subtitle">87% completed</div>
+                                        </div>
+                                        <div class="prod-app-card">
+                                            <div class="prod-app-card-title">Upcoming Deadlines</div>
+                                            <div class="prod-app-card-subtitle">3 projects due soon</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1394,11 +1436,11 @@
                         </figure>
                     </article>
 
-                    <!-- <article class="c-hotels__item">
+                    <article class="c-hotels__item">
                         <figure class="c-hotels__item-figure">
                             <img src="assets/images/creatives/Finance.png" alt="" />
                         </figure>
-                    </article> -->
+                    </article>
 
                     <article class="c-hotels__item">
                         <figure class="c-hotels__item-figure">
