@@ -77,6 +77,268 @@
             opacity: 1;
         }
     </style>
+
+    <style>
+        .aktion_faq_cards_container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .aktion_faq_cards_grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            justify-items: center;
+        }
+
+        .aktion_faq_flip_card {
+            position: relative;
+            width: 350px;
+            height: 450px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .aktion_faq_card_inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .aktion_faq_flip_card:hover .aktion_faq_card_inner,
+        .aktion_faq_flip_card.aktion_faq_flipped .aktion_faq_card_inner {
+            transform: rotateY(180deg);
+        }
+
+        .aktion_faq_card_front,
+        .aktion_faq_card_back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+        }
+
+        .aktion_faq_card_front {
+            background-size: cover;
+            background-position: center;
+            color: white;
+            transform: rotateY(0deg);
+        }
+
+        .aktion_faq_card_front::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+            border-radius: 20px;
+        }
+
+        .aktion_faq_card_front>* {
+            position: relative;
+            z-index: 2;
+        }
+
+        .aktion_faq_card_back {
+            background: #ffffff;
+            color: #333;
+            transform: rotateY(180deg);
+        }
+
+        /* UNIQUE IMAGES FOR EACH CARD */
+        .aktion_faq_flip_card.card_1 .aktion_faq_card_front {
+            background-image: url('https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+        }
+
+        .aktion_faq_flip_card.card_2 .aktion_faq_card_front {
+            background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+        }
+
+        .aktion_faq_flip_card.card_3 .aktion_faq_card_front {
+            background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+        }
+
+        .aktion_faq_flip_card.card_4 .aktion_faq_card_front {
+            background-image: url('https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+        }
+
+        .aktion_faq_flip_card.card_5 .aktion_faq_card_front {
+            background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+        }
+
+        .aktion_faq_flip_card.card_6 .aktion_faq_card_front {
+            background-image: url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+        }
+
+        .aktion_faq_question_text {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .aktion_faq_answer_text {
+            font-size: 1.4rem;
+            padding-top: 40px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .aktion_faq_value_text {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #f44336;
+            border-top: 2px solid #f44336;
+            padding-top: 15px;
+            margin-top: auto;
+        }
+
+        .aktion_faq_flip_icon {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .aktion_faq_flip_icon:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .aktion_faq_mobile_slider {
+            display: none;
+        }
+
+        /* Tablet View */
+        @media (max-width: 1024px) {
+            .aktion_faq_cards_grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .aktion_faq_flip_card {
+                width: 320px;
+                height: 420px;
+            }
+        }
+
+        /* Mobile View - Slider */
+        @media (max-width: 768px) {
+            .aktion_faq_cards_grid {
+                display: none;
+            }
+
+            .aktion_faq_mobile_slider {
+                display: block;
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                height: 480px;
+                border-radius: 20px;
+            }
+
+            .aktion_faq_slider_track {
+                display: flex;
+                width: 600%;
+                height: 100%;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .aktion_faq_slider_card {
+                flex: 0 0 16.666%;
+                padding: 0 10px;
+            }
+
+            .aktion_faq_slider_card .aktion_faq_flip_card {
+                width: 100%;
+                max-width: 300px;
+                height: 450px;
+                margin: 0 auto;
+            }
+
+            .aktion_faq_slider_indicators {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                padding: 5px 10px;
+                border-radius: 15px;
+                font-size: 0.8rem;
+                backdrop-filter: blur(5px);
+                z-index: 10;
+            }
+
+            .aktion_faq_slider_dots {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+                gap: 10px;
+            }
+
+            .aktion_faq_dot {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.5);
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .aktion_faq_dot.aktion_faq_active_dot {
+                background: white;
+                transform: scale(1.2);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .aktion_faq_flip_card {
+                width: 280px;
+                height: 400px;
+            }
+
+            .aktion_faq_question_text {
+                font-size: 1.1rem;
+            }
+
+            .aktion_faq_answer_text {
+                font-size: 0.9rem;
+            }
+
+            .aktion_faq_value_text {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -189,131 +451,319 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-inner text-center">
-                        <h3 class="title h3">Explore Our Integrations</h3>
-                        <p class="bc-desc">Experience smooth and efficient connections with all your favorite tools
-                            through seamless global integrations, enhancing productivity, collaboration, and workflow
-                            across multiple platforms with ease and reliability</p>
+                        <h3 class="title h3">Why Generic Process Flows Don’t Work Anymore</h3>
+                        <p class="bc-desc">As your AI-driven productivity and meeting intelligence companion, AktionAI
+                            bridges the gap between talk and tangible
+                            business impact. We don’t just document what happens. We automate next steps, empower your
+                            teams, and deliver measurable
+                            outcomes—seamlessly, in real time.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <section class="aktionAI-integrations-section">
-        <div class="container">
-            <!-- Integration categories -->
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <!-- Category 1: Calendar & Conferencing -->
-                    <div class="aktionAI-category-card aktionAI-fade-in-up h-100">
-                        <div class="aktionAI-category-header">
-                            <h3 class="aktionAI-category-title">Calendar & Conferencing</h3>
-                            <div class="aktionAI-category-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                                </svg>
-                            </div>
+
+    <div class="aktion_faq_cards_container">
+        <!-- Desktop/Tablet Grid -->
+        <div class="aktion_faq_cards_grid">
+            <!-- Card 1 -->
+            <div class="aktion_faq_flip_card card_1" onclick="toggleCard(this)">
+                <div class="aktion_faq_card_inner">
+                    <div class="aktion_faq_card_front">
+                        <div class="aktion_faq_question_text">What happens after a sales huddle?</div>
+                        <div class="aktion_faq_flip_icon">↻</div>
+                    </div>
+                    <div class="aktion_faq_card_back">
+                        <div class="aktion_faq_answer_text">
+                            • Transcribes and summarizes meetings in any language (online or offline)<br>
+                            • Auto-assigns deals, follow-ups, and action items to the right owners via Slack, WhatsApp,
+                            Asana, or CRM
                         </div>
-                        <ul class="aktionAI-integration-list">
-                            <li class="aktionAI-integration-item">
-                                <span class="aktionAI-integration-check">✅</span>
-                                <span class="aktionAI-integration-name">Google Meet</span>
-                            </li>
-                            <li class="aktionAI-integration-item">
-                                <span class="aktionAI-integration-check">✅</span>
-                                <span class="aktionAI-integration-name">Zoom</span>
-                            </li>
-                            <li class="aktionAI-integration-item">
-                                <span class="aktionAI-integration-check">✅</span>
-                                <span class="aktionAI-integration-name">Microsoft Teams</span>
-                            </li>
-                            <li class="aktionAI-integration-item">
-                                <span class="aktionAI-integration-check">✅</span>
-                                <span class="aktionAI-integration-name">GoTo Meeting</span>
-                            </li>
-                        </ul>
+                        <div class="aktion_faq_value_text">
+                            <strong>Value:</strong> Faster deal cycles, zero missed follow-ups, clear accountability.
+                            See it
+                            in action. Turn talk into tasks now.
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <!-- Category 2: Task Management -->
-                    <div class="aktionAI-category-card aktionAI-fade-in-up h-100">
-                        <div class="aktionAI-category-header">
-                            <h3 class="aktionAI-category-title">Task Management</h3>
-                            <div class="aktionAI-category-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                                </svg>
-                            </div>
+            <!-- Card 2 -->
+            <div class="aktion_faq_flip_card card_2" onclick="toggleCard(this)">
+                <div class="aktion_faq_card_inner">
+                    <div class="aktion_faq_card_front">
+                        <div class="aktion_faq_question_text">How do I track shift handovers across my operations team?
                         </div>
-                        <ul class="aktionAI-integration-list">
-                            <li class="aktionAI-integration-item">
-                                <span class="aktionAI-integration-check">✅</span>
-                                <span class="aktionAI-integration-name">Jira</span>
-                            </li>
-                            <li class="aktionAI-integration-item">
-                                <span class="aktionAI-integration-check">✅</span>
-                                <span class="aktionAI-integration-name">Asana</span>
-                            </li>
-                            <li class="aktionAI-integration-item">
-                                <span class="aktionAI-integration-check">✅</span>
-                                <span class="aktionAI-integration-name">Trello</span>
-                            </li>
-                            <li class="aktionAI-integration-item">
-                                <span class="aktionAI-integration-check">✅</span>
-                                <span class="aktionAI-integration-name">Monday.com</span>
-                            </li>
-                        </ul>
+                        <div class="aktion_faq_flip_icon">↻</div>
+                    </div>
+                    <div class="aktion_faq_card_back">
+                        <div class="aktion_faq_answer_text">
+                            • Captures spoken/written handover updates and turns them into dynamic checklists<br>
+                            • Incomplete tasks roll over automatically with timestamps for audit
+                        </div>
+                        <div class="aktion_faq_value_text">
+                            <strong>Value:</strong> Smooth handovers, fewer errors, higher efficiency at scale. Try it
+                            with
+                            your field team and see shift accountability soar.
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <!-- Category 3: CRM & Sales Tools -->
-                    <div class="aktionAI-category-card aktionAI-fade-in-up h-100">
-                        <div class="aktionAI-category-header">
-                            <h3 class="aktionAI-category-title">CRM & Sales Tools</h3>
-                            <div class="aktionAI-category-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
-                            </div>
+            <!-- Card 3 -->
+            <div class="aktion_faq_flip_card card_3" onclick="toggleCard(this)">
+                <div class="aktion_faq_card_inner">
+                    <div class="aktion_faq_card_front">
+                        <div class="aktion_faq_question_text">What if my team loses internet connectivity?</div>
+                        <div class="aktion_faq_flip_icon">↻</div>
+                    </div>
+                    <div class="aktion_faq_card_back">
+                        <div class="aktion_faq_answer_text">
+                            • Works offline, storing conversations and notes locally<br>
+                            • Auto-syncs tasks, action items, and summaries when back online
                         </div>
-                        <ul class="aktionAI-integration-list">
-                            <li class="aktionAI-integration-item">
-                                <span class="aktionAI-integration-check">✅</span>
-                                <span class="aktionAI-integration-name">Salesforce</span>
-                            </li>
-                            <li class="aktionAI-integration-item">
-                                <span class="aktionAI-integration-check">✅</span>
-                                <span class="aktionAI-integration-name">HubSpot</span>
-                            </li>
-                            <li class="aktionAI-integration-item">
-                                <span class="aktionAI-integration-check">✅</span>
-                                <span class="aktionAI-integration-name">Zoho</span>
-                            </li>
-                            <li class="aktionAI-integration-item">
-                                <span class="aktionAI-integration-check">✅</span>
-                                <span class="aktionAI-integration-name">Pipedrive</span>
-                            </li>
-                        </ul>
+                        <div class="aktion_faq_value_text">
+                            <strong>Value:</strong> Uninterrupted productivity and seamless data integrity. Experience
+                            seamless sync and never lose a detail again.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="aktion_faq_flip_card card_4" onclick="toggleCard(this)">
+                <div class="aktion_faq_card_inner">
+                    <div class="aktion_faq_card_front">
+                        <div class="aktion_faq_question_text">How can we improve project management using AktionAI?
+                        </div>
+                        <div class="aktion_faq_flip_icon">↻</div>
+                    </div>
+                    <div class="aktion_faq_card_back">
+                        <div class="aktion_faq_answer_text">
+                            • Maps milestones, dependencies, and blockers into project boards (Jira, Trello, Monday)<br>
+                            • Updates deadlines and ownership in real time without manual effort
+                        </div>
+                        <div class="aktion_faq_value_text">
+                            <strong>Value:</strong> On-time delivery, fewer bottlenecks, complete visibility. See
+                            real-time
+                            project mapping and keep every project on track.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="aktion_faq_flip_card card_5" onclick="toggleCard(this)">
+                <div class="aktion_faq_card_inner">
+                    <div class="aktion_faq_card_front">
+                        <div class="aktion_faq_question_text">What if I missed a point during the meeting?</div>
+                        <div class="aktion_faq_flip_icon">↻</div>
+                    </div>
+                    <div class="aktion_faq_card_back">
+                        <div class="aktion_faq_answer_text">
+                            • Captures the full discussion and auto-summarises key highlights, decisions, and next
+                            steps<br>
+                            • No detail gets lost even if you step out or join late
+                        </div>
+                        <div class="aktion_faq_value_text">
+                            <strong>Value:</strong> Clarity and accountability for every team member. Try it in your
+                            next
+                            huddle to see how focus improves when everyone's on the same page.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="aktion_faq_flip_card card_6" onclick="toggleCard(this)">
+                <div class="aktion_faq_card_inner">
+                    <div class="aktion_faq_card_front">
+                        <div class="aktion_faq_question_text">Can I get summaries in my language?</div>
+                        <div class="aktion_faq_flip_icon">↻</div>
+                    </div>
+                    <div class="aktion_faq_card_back">
+                        <div class="aktion_faq_answer_text">
+                            • Generates instant meeting summaries and MOMs in multiple Indian languages<br>
+                            • Auto-translates into English or your preferred language for cross-team alignment
+                        </div>
+                        <div class="aktion_faq_value_text">
+                            <strong>Value:</strong> Inclusive collaboration without language barriers. Experience
+                            smoother
+                            communication that lets every voice be heard, in every language.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Mobile Slider -->
+        <div class="aktion_faq_mobile_slider">
+            <div class="aktion_faq_slider_indicators">
+                <span id="slideCounter">1 / 6</span>
+            </div>
+            <div class="aktion_faq_slider_track" id="sliderTrack">
+                <!-- Card 1 -->
+                <div class="aktion_faq_slider_card">
+                    <div class="aktion_faq_flip_card card_1" onclick="toggleCard(this)">
+                        <div class="aktion_faq_card_inner">
+                            <div class="aktion_faq_card_front">
+                                <div class="aktion_faq_question_text">
+                                    <h2 class="fs-5">What happens after a sales huddle?</h2>
+                                </div>
+                                <div class="aktion_faq_flip_icon">↻</div>
+                            </div>
+                            <div class="aktion_faq_card_back">
+                                <div class="aktion_faq_answer_text">
+                                    • Transcribes and summarizes meetings in any language (online or offline)<br>
+                                    • Auto-assigns deals, follow-ups, and action items to the right owners via Slack,
+                                    WhatsApp, Asana, or CRM
+                                </div>
+                                <div class="aktion_faq_value_text">
+                                    <strong>Value:</strong> Faster deal cycles, zero missed follow-ups, clear
+                                    accountability. See it in action. Turn talk into tasks now.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="aktion_faq_slider_card">
+                    <div class="aktion_faq_flip_card card_2" onclick="toggleCard(this)">
+                        <div class="aktion_faq_card_inner">
+                            <div class="aktion_faq_card_front">
+                                <div class="aktion_faq_question_text">How do I track shift handovers across my
+                                    operations
+                                    team?</div>
+                                <div class="aktion_faq_flip_icon">↻</div>
+                            </div>
+                            <div class="aktion_faq_card_back">
+                                <div class="aktion_faq_answer_text">
+                                    • Captures spoken/written handover updates and turns them into dynamic
+                                    checklists<br>
+                                    • Incomplete tasks roll over automatically with timestamps for audit
+                                </div>
+                                <div class="aktion_faq_value_text">
+                                    <strong>Value:</strong> Smooth handovers, fewer errors, higher efficiency at scale.
+                                    Try
+                                    it with your field team and see shift accountability soar.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="aktion_faq_slider_card">
+                    <div class="aktion_faq_flip_card card_3" onclick="toggleCard(this)">
+                        <div class="aktion_faq_card_inner">
+                            <div class="aktion_faq_card_front">
+                                <div class="aktion_faq_question_text">What if my team loses internet connectivity?</div>
+                                <div class="aktion_faq_flip_icon">↻</div>
+                            </div>
+                            <div class="aktion_faq_card_back">
+                                <div class="aktion_faq_answer_text">
+                                    • Works offline, storing conversations and notes locally<br>
+                                    • Auto-syncs tasks, action items, and summaries when back online
+                                </div>
+                                <div class="aktion_faq_value_text">
+                                    <strong>Value:</strong> Uninterrupted productivity and seamless data integrity.
+                                    Experience seamless sync and never lose a detail again.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="aktion_faq_slider_card">
+                    <div class="aktion_faq_flip_card card_4" onclick="toggleCard(this)">
+                        <div class="aktion_faq_card_inner">
+                            <div class="aktion_faq_card_front">
+                                <div class="aktion_faq_question_text">How can we improve project management using
+                                    AktionAI?
+                                </div>
+                                <div class="aktion_faq_flip_icon">↻</div>
+                            </div>
+                            <div class="aktion_faq_card_back">
+                                <div class="aktion_faq_answer_text">
+                                    • Maps milestones, dependencies, and blockers into project boards (Jira, Trello,
+                                    Monday)<br>
+                                    • Updates deadlines and ownership in real time without manual effort
+                                </div>
+                                <div class="aktion_faq_value_text">
+                                    <strong>Value:</strong> On-time delivery, fewer bottlenecks, complete visibility.
+                                    See
+                                    real-time project mapping and keep every project on track.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="aktion_faq_slider_card">
+                    <div class="aktion_faq_flip_card card_5" onclick="toggleCard(this)">
+                        <div class="aktion_faq_card_inner">
+                            <div class="aktion_faq_card_front">
+                                <div class="aktion_faq_question_text">What if I missed a point during the meeting?</div>
+                                <div class="aktion_faq_flip_icon">↻</div>
+                            </div>
+                            <div class="aktion_faq_card_back">
+                                <div class="aktion_faq_answer_text">
+                                    • Captures the full discussion and auto-summarises key highlights, decisions, and
+                                    next
+                                    steps<br>
+                                    • No detail gets lost even if you step out or join late
+                                </div>
+                                <div class="aktion_faq_value_text">
+                                    <strong>Value:</strong> Clarity and accountability for every team member. Try it in
+                                    your
+                                    next huddle to see how focus improves when everyone's on the same page.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="aktion_faq_slider_card">
+                    <div class="aktion_faq_flip_card card_6" onclick="toggleCard(this)">
+                        <div class="aktion_faq_card_inner">
+                            <div class="aktion_faq_card_front">
+                                <div class="aktion_faq_question_text">Can I get summaries in my language?</div>
+                                <div class="aktion_faq_flip_icon">↻</div>
+                            </div>
+                            <div class="aktion_faq_card_back">
+                                <div class="aktion_faq_answer_text">
+                                    • Generates instant meeting summaries and MOMs in multiple Indian languages<br>
+                                    • Auto-translates into English or your preferred language for cross-team alignment
+                                </div>
+                                <div class="aktion_faq_value_text">
+                                    <strong>Value:</strong> Inclusive collaboration without language barriers.
+                                    Experience
+                                    smoother communication that lets every voice be heard, in every language.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider dots -->
+            <div class="aktion_faq_slider_dots">
+                <span class="aktion_faq_dot aktion_faq_active_dot" onclick="goToSlide(0)"></span>
+                <span class="aktion_faq_dot" onclick="goToSlide(1)"></span>
+                <span class="aktion_faq_dot" onclick="goToSlide(2)"></span>
+                <span class="aktion_faq_dot" onclick="goToSlide(3)"></span>
+                <span class="aktion_faq_dot" onclick="goToSlide(4)"></span>
+                <span class="aktion_faq_dot" onclick="goToSlide(5)"></span>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Start Footer Area  -->
     <footer class="rainbow-footer footer-style-default footer-style-3 position-relative">
@@ -339,8 +789,8 @@
                                         </form> -->
                             <h4 class="subtitle-new">Download Our App</h4>
                             <div class="app-store-buttons">
-                                <a href="https://play.google.com/store/apps/details?id=com.bct.aktionairecorder&pcampaignid=web_share" target="_blank"
-                                    class="app-store-link">
+                                <a href="https://play.google.com/store/apps/details?id=com.bct.aktionairecorder&pcampaignid=web_share"
+                                    target="_blank" class="app-store-link">
                                     <img src="assets/images/app-store/google-play.png" alt="Get it on Google Play"
                                         class="store-badge">
                                 </a>
@@ -548,6 +998,122 @@
             });
         });
     </script>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 6;
+        let slideInterval;
+
+        // Toggle card flip on mobile/desktop
+        function toggleCard(card) {
+            card.classList.toggle('aktion_faq_flipped');
+        }
+
+        // Auto-slider functionality for mobile
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+            restartAutoSlide();
+        }
+
+        function updateSlider() {
+            const track = document.getElementById('sliderTrack');
+            const counter = document.getElementById('slideCounter');
+            const translateX = -(currentSlide * 16.666);
+            track.style.transform = `translateX(${translateX}%)`;
+
+            // Update counter
+            if (counter) {
+                counter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+            }
+
+            // Update dots
+            document.querySelectorAll('.aktion_faq_dot').forEach((dot, index) => {
+                dot.classList.toggle('aktion_faq_active_dot', index === currentSlide);
+            });
+        }
+
+        function startAutoSlide() {
+            slideInterval = setInterval(nextSlide, 6000); // 6 seconds interval
+        }
+
+        function restartAutoSlide() {
+            clearInterval(slideInterval);
+            startAutoSlide();
+        }
+
+        // Initialize auto-slider on mobile
+        function initSlider() {
+            if (window.innerWidth <= 768) {
+                startAutoSlide();
+            }
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 768) {
+                if (!slideInterval) {
+                    startAutoSlide();
+                }
+            } else {
+                clearInterval(slideInterval);
+                slideInterval = null;
+            }
+        });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', initSlider);
+
+        // Pause auto-slide on hover (mobile)
+        const slider = document.querySelector('.aktion_faq_mobile_slider');
+        if (slider) {
+            slider.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+
+            slider.addEventListener('mouseleave', () => {
+                if (window.innerWidth <= 768) {
+                    startAutoSlide();
+                }
+            });
+        }
+
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+
+        slider?.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        slider?.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const threshold = 50;
+            const diff = startX - endX;
+
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    // Swipe left - next slide
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                } else {
+                    // Swipe right - previous slide
+                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                }
+                updateSlider();
+                restartAutoSlide();
+            }
+        }
+    </script>
+
 </body>
 
 </html>

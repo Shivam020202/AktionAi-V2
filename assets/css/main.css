@@ -394,9 +394,9 @@ input {
 
 .transcript-hero__title {
   color: var(--color-heading);
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   line-height: 1.1;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   font-weight: var(--p-bold);
   letter-spacing: -0.02em;
 }
@@ -772,6 +772,9 @@ input {
 .aktion-column-header {
   /* display: flex; */
   /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -783,6 +786,24 @@ input {
   color: #333;
   text-align: center;
   margin: 0;
+}
+
+.aktion-header-subtitle {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 0px;
+  /* margin-top: 8px; */
+}
+
+.aktion-header-subtitle-2 {
+  font-size: 12px;
+  color: white;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 0px;
+  /* margin-top: 8px; */
 }
 
 .aktion-challenge-column {
@@ -803,8 +824,9 @@ input {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.aktion-logo {
+.aktion-logo-table {
   height: 40px;
+  margin: 0 auto;
   width: auto;
 }
 
@@ -4763,7 +4785,7 @@ input {
   }
 }
 
-/* Auto-sliding Images */
+/* Auto-sliding Images - Optimized for 4 Images */
 .image-slider {
   width: 620px;
   height: 600px;
@@ -4774,8 +4796,8 @@ input {
 
 .image-track {
   display: flex;
-  width: calc(300px * 6);
-  animation: autoSlide 18s infinite linear;
+  width: calc(300px * 8); /* 4 images × 2 for seamless loop */
+  animation: autoSlide 12s infinite linear; /* Reduced from 18s to 12s */
 }
 
 .image-slide {
@@ -4798,23 +4820,17 @@ input {
   0% {
     transform: translateX(0);
   }
-  16.66% {
-    transform: translateX(-320px);
-  }
-  33.33% {
-    transform: translateX(-640px);
+  25% {
+    transform: translateX(-320px); /* First image */
   }
   50% {
-    transform: translateX(-960px);
+    transform: translateX(-640px); /* Second image */
   }
-  66.66% {
-    transform: translateX(-1280px);
-  }
-  83.33% {
-    transform: translateX(-1600px);
+  75% {
+    transform: translateX(-960px); /* Third image */
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(-1280px); /* Fourth image, then loops back */
   }
 }
 
@@ -4846,37 +4862,24 @@ input {
   }
 
   .image-track {
-    width: calc(300px * 6);
-    animation: autoSlideMobile 18s infinite linear;
+    width: calc(320px * 8); /* 4 original + 4 duplicate images */
+    animation: autoSlideMobile 16s infinite linear;
   }
 
   .image-slide {
     width: 300px;
     height: 400px;
-    margin-right: 0;
+    margin-right: 20px; /* Keep margin for mobile too */
   }
 
   @keyframes autoSlideMobile {
     0% {
       transform: translateX(0);
     }
-    16.66% {
-      transform: translateX(-300px);
-    }
-    33.33% {
-      transform: translateX(-600px);
-    }
-    50% {
-      transform: translateX(-900px);
-    }
-    66.66% {
-      transform: translateX(-1200px);
-    }
-    83.33% {
-      transform: translateX(-1500px);
-    }
     100% {
-      transform: translateX(0);
+      transform: translateX(
+        -1280px
+      ); /* Move exactly 4 images worth (320px × 4) */
     }
   }
 }
