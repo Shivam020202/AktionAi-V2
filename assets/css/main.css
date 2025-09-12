@@ -5169,3 +5169,99 @@ input {
     /* height: 350px; */
   }
 }
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eb1c2f;
+  color: white;
+  padding: 10px 30px;
+  font-size: 1.4rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+
+/* Hide on tablet screens and below */
+@media (max-width: 991px) {
+  .btn-download {
+    display: none;
+  }
+}
+
+.btn-download:hover {
+  background-color: red;
+  color: white;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn-download .fab {
+  margin-right: 10px;
+}
+
+.btn-download .fab.fa-apple {
+  color: #ffffff;
+}
+
+.btn-download .fab.fa-google-play {
+  color: #ffffff;
+}
+
+.app-store-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.app-store-link {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.app-store-link:hover {
+  transform: scale(1.05);
+}
+
+.store-badge {
+  height: 45px;
+  width: auto;
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  margin-bottom: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+.app-store-link:hover .tooltip,
+.app-store-link:active .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
