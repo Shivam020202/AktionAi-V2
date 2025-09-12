@@ -62,14 +62,24 @@
     </script>
     <style>
         .btn-download {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             background-color: #EB1C2F;
             color: white;
             padding: 10px 30px;
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             border-radius: 50px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             margin-right: 10px;
+        }
+
+        /* Hide on tablet screens and below */
+        @media (max-width: 991px) {
+            .btn-download {
+                display: none;
+            }
         }
 
         .btn-download:hover {
@@ -165,6 +175,8 @@
         }
 
         .c-hotels__title {
+            position: sticky;
+            top: 70px;
             width: min(1200px, 100%);
             padding: 20px 20px;
             color: #1E1E1E;
@@ -180,7 +192,7 @@
 
         .c-hotels__item {
             position: sticky;
-            top: 100px;
+            top: 160px;
             right: 0;
             left: 0;
             display: grid;
@@ -1092,7 +1104,7 @@
                         <a href="index.html" class="aktion-nav-link active">Home</a>
                     </li>
                     <li class="aktion-nav-item">
-                        <a href="integrations.html" class="aktion-nav-link">Integrations</a>
+                        <a href="integrations.html" class="aktion-nav-link">How it works</a>
                     </li>
                     <li class="aktion-nav-item">
                         <a href="company.html" class="aktion-nav-link">Company</a>
@@ -1109,13 +1121,13 @@
 
                 <a href="https://play.google.com/store/apps/details?id=com.bct.aktionairecorder&pcampaignid=web_share"
                     class="btn btn-download">
-                    <i class="fab fa-apple"></i>
+                    <!-- <i class="fab fa-apple"></i> -->
                     <i class="fab fa-google-play"></i>
                     Download App
                 </a>
 
                 <a href="/contact.html" class=" aktion-demo-btn">
-                    Schedule a demo
+
                     <span class="aktion-phone-icon">
                         <svg viewBox="0 0 24 24" fill="none">
                             <path
@@ -1123,6 +1135,7 @@
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </span>
+                    Schedule a demo
                 </a>
                 <button class="aktion-mobile-toggle-1">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -1191,7 +1204,8 @@
         <section class="transcript-hero">
             <div class="transcript-hero__content">
                 <!-- <div class="transcript-hero__label mt-5">#1 INTELLIGENT MEETING AGENT</div> -->
-                <h1 class="transcript-hero__title">From Conversations to Impact, The <span class="text-danger">AI
+                <h1 class="transcript-hero__title md-mt-5">From Conversations to Impact, The <span
+                        class="text-danger">AI
                         Productivity </span> Companion for <span class="text-danger">SMBs</span>
                 </h1>
                 <p class="text-secondary mt-0">Turns every discussions into structured work across Sales, HR, Finance,
@@ -1207,7 +1221,7 @@
                 <div class="transcript-cta">
                     <a href="https://play.google.com/store/apps/details?id=com.bct.aktionairecorder&pcampaignid=web_share"
                         class="btn btn-download">
-                        <i class="fab fa-apple"></i>
+                        <!-- <i class="fab fa-apple"></i> -->
                         <i class="fab fa-google-play"></i>
                         Download App
                     </a>
@@ -1317,9 +1331,14 @@
         </div> -->
 
         <div class="tab-section">
-            <h1 class="c-hotels__title">
-                Key Features of AktionAI
-            </h1>
+            <div>
+                <div class="col-lg-12 mt-5">
+                    <div class="section-title text-center pb--30 " data-sal="slide-up" data-sal-duration="700"
+                        data-sal-delay="100">
+                        <h2 class="title mb--0">Key Features of AktionAi</h2>
+                    </div>
+                </div>
+            </div>
             <!-- Separated Tab Navigation -->
             <div class="tab-navigation">
                 <button class="tab-button active" data-tab="conversations">Conversations</button>
@@ -1428,7 +1447,7 @@
                 <ul class="c-hotels__list">
                     <article class="c-hotels__item">
                         <figure class="c-hotels__item-figure">
-                            <img src="assets/images/creatives/Hr.png" alt="" />
+                            <img src="assets/images/creatives/Hr (2).png" alt="" />
                         </figure>
                     </article>
 
@@ -1440,19 +1459,19 @@
 
                     <article class="c-hotels__item">
                         <figure class="c-hotels__item-figure">
-                            <img src="assets/images/creatives/Finance.png" alt="" />
+                            <img src="assets/images/creatives/Finance-1.png" alt="" />
                         </figure>
                     </article>
 
                     <article class="c-hotels__item">
                         <figure class="c-hotels__item-figure">
-                            <img src="assets/images/creatives/Product Management (1).png" alt="" />
+                            <img src="assets/images/creatives/Product Management.png" alt="" />
                         </figure>
                     </article>
 
                     <article class="c-hotels__item">
                         <figure class="c-hotels__item-figure">
-                            <img src="assets/images/creatives/Production -Operations.png" alt="" />
+                            <img src="assets/images/creatives/Production  Operations.png" alt="" />
                         </figure>
                     </article>
 
@@ -1610,8 +1629,8 @@
 
         <section class="aktion-feature-section">
             <div>
-                <div class="col-lg-12 mt-5">
-                    <div class="section-title text-center pb--30 " data-sal="slide-up" data-sal-duration="700"
+                <div class="col-lg-12">
+                    <div class="section-title text-center pb--30" data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="100">
                         <h2 class="title mb--0">Traditional approach vs. Our approach</h2>
                     </div>
@@ -1619,138 +1638,162 @@
             </div>
 
             <div class="aktion-comparison-wrapper">
-                <!-- Challenge Column -->
-                <div class="aktion-column aktion-challenge-column">
-                    <div class="aktion-column-header">
-                        <h3 class="aktion-header-title">Challenges / Needs</h3>
-                        <p class="aktion-header-subtitle">What SMBs face</p>
-                    </div>
-                    <div class="aktion-row-item">
-                        <span class="aktion-challenge-text">SMB Relevance</span>
-                    </div>
-                    <div class="aktion-row-item">
-                        <span class="aktion-challenge-text">Language Inclusivity</span>
-                    </div>
-                    <div class="aktion-row-item">
-                        <span class="aktion-challenge-text">Connectivity</span>
-                    </div>
-                    <div class="aktion-row-item">
-                        <span class="aktion-challenge-text">Adoption Ease</span>
-                    </div>
-                    <div class="aktion-row-item">
-                        <span class="aktion-challenge-text">Cross-Functional Use</span>
-                    </div>
-                    <div class="aktion-row-item">
-                        <span class="aktion-challenge-text">Outcome Orientation</span>
-                    </div>
-                </div>
+                <table class="aktion-comparison-table" role="table"
+                    aria-label="Comparison between traditional AI tools and Aktion AI">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
 
-                <!-- Traditional Column -->
-                <div class="aktion-column aktion-traditional-column">
-                    <div class="aktion-column-header">
-                        <h3 class="aktion-header-title">Generic AI Tools</h3>
-                        <p class="aktion-header-subtitle">Where they fall short</p>
-                    </div>
-                    <div class="aktion-row-item">
-                        <span class="aktion-traditional-text">Built for enterprise use, too complex, high learning
-                            curve</span>
-                    </div>
-                    <div class="aktion-row-item">
-                        <span class="aktion-traditional-text">Primarily English-only → alienates local teams</span>
-                    </div>
-                    <div class="aktion-row-item">
-                        <span class="aktion-traditional-text">Cloud-only, needs strong internet</span>
-                    </div>
-                    <div class="aktion-row-item">
-                        <span class="aktion-traditional-text">Requires training, separate logins & apps</span>
-                    </div>
-                    <div class="aktion-row-item">
-                        <span class="aktion-traditional-text">Limited to meetings or note-taking</span>
-                    </div>
-                    <div class="aktion-row-item">
-                        <span class="aktion-traditional-text">Summaries only → no follow-through</span>
-                    </div>
-                </div>
+                    <thead>
+                        <tr class="aktion-table-header">
+                            <th class="aktion-challenge-header" scope="col">
+                                <h3 class="aktion-header-title">Challenges / Needs</h3>
+                                <p class="aktion-header-subtitle">What SMBs face</p>
+                            </th>
+                            <th class="aktion-traditional-header" scope="col">
+                                <h3 class="aktion-header-title">Generic AI Tools</h3>
+                                <p class="aktion-header-subtitle">Where they fall short</p>
+                            </th>
+                            <th class="aktion-ai-header" scope="col">
+                                <img src="assets/images/logo/logo.png" alt="Aktion AI" class="aktion-logo-table">
+                                <p class="aktion-header-subtitle-2">Our Difference</p>
+                            </th>
+                        </tr>
+                    </thead>
 
-                <!-- AI Column -->
-                <div class="aktion-column aktion-ai-column">
-                    <div class="aktion-column-header">
-                        <img src="assets/images/logo/logo.png" alt="Aktion AI" class="aktion-logo-table">
-                        <p class="aktion-header-subtitle-2">Our Difference</p>
-                    </div>
-                    <div class="aktion-row-item">
-                        <div class="aktion-ai-feature">
-                            <span class="aktion-check-icon">
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="white" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                            Designed for SMBs → simple, voice first, WhatsApp/Email-friendly
-                        </div>
-                    </div>
-                    <div class="aktion-row-item">
-                        <div class="aktion-ai-feature">
-                            <span class="aktion-check-icon">
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="white" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                            Multilingual support (Indian + global languages)
-                        </div>
-                    </div>
-                    <div class="aktion-row-item">
-                        <div class="aktion-ai-feature">
-                            <span class="aktion-check-icon">
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="white" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                            Offline-first → captures offline, syncs when online
-                        </div>
-                    </div>
-                    <div class="aktion-row-item">
-                        <div class="aktion-ai-feature">
-                            <span class="aktion-check-icon">
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="white" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                            Low setup → Works with existing tools (Calendar, WhatsApp, Email)
-                        </div>
-                    </div>
-                    <div class="aktion-row-item">
-                        <div class="aktion-ai-feature">
-                            <span class="aktion-check-icon">
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="white" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                            Sales, HR, Finance, Ops, Marketing — one AI layer for all
-                        </div>
-                    </div>
-                    <div class="aktion-row-item">
-                        <div class="aktion-ai-feature">
-                            <span class="aktion-check-icon">
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="white" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                            Capture → Organize → Act → tasks, nudges, accountability
-                        </div>
-                    </div>
-                </div>
+                    <tbody>
+                        <tr class="aktion-table-row">
+                            <td class="aktion-challenge-cell">
+                                <span class="aktion-challenge-text">SMB Relevance</span>
+                            </td>
+                            <td class="aktion-traditional-cell">
+                                <span class="aktion-traditional-text">Built for enterprise use, too complex, high
+                                    learning
+                                    curve</span>
+                            </td>
+                            <td class="aktion-ai-cell">
+                                <div class="aktion-ai-feature">
+                                    <span class="aktion-check-icon">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="white"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    Designed for SMBs → simple, voice first, WhatsApp/Email-friendly
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="aktion-table-row">
+                            <td class="aktion-challenge-cell">
+                                <span class="aktion-challenge-text">Language Inclusivity</span>
+                            </td>
+                            <td class="aktion-traditional-cell">
+                                <span class="aktion-traditional-text">Primarily English-only → alienates local
+                                    teams</span>
+                            </td>
+                            <td class="aktion-ai-cell">
+                                <div class="aktion-ai-feature">
+                                    <span class="aktion-check-icon">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="white"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    Multilingual support (Indian + global languages)
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="aktion-table-row">
+                            <td class="aktion-challenge-cell">
+                                <span class="aktion-challenge-text">Connectivity</span>
+                            </td>
+                            <td class="aktion-traditional-cell">
+                                <span class="aktion-traditional-text">Cloud-only, needs strong internet</span>
+                            </td>
+                            <td class="aktion-ai-cell">
+                                <div class="aktion-ai-feature">
+                                    <span class="aktion-check-icon">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="white"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    Offline-first → captures offline, syncs when online
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="aktion-table-row">
+                            <td class="aktion-challenge-cell">
+                                <span class="aktion-challenge-text">Adoption Ease</span>
+                            </td>
+                            <td class="aktion-traditional-cell">
+                                <span class="aktion-traditional-text">Requires training, separate logins & apps</span>
+                            </td>
+                            <td class="aktion-ai-cell">
+                                <div class="aktion-ai-feature">
+                                    <span class="aktion-check-icon">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="white"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    Low setup → Works with existing tools (Calendar, WhatsApp, Email)
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="aktion-table-row">
+                            <td class="aktion-challenge-cell">
+                                <span class="aktion-challenge-text">Cross-Functional Use</span>
+                            </td>
+                            <td class="aktion-traditional-cell">
+                                <span class="aktion-traditional-text">Limited to meetings or note-taking</span>
+                            </td>
+                            <td class="aktion-ai-cell">
+                                <div class="aktion-ai-feature">
+                                    <span class="aktion-check-icon">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="white"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    Sales, HR, Finance, Ops, Marketing — one AI layer for all
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="aktion-table-row">
+                            <td class="aktion-challenge-cell">
+                                <span class="aktion-challenge-text">Outcome Orientation</span>
+                            </td>
+                            <td class="aktion-traditional-cell">
+                                <span class="aktion-traditional-text">Summaries only → no follow-through</span>
+                            </td>
+                            <td class="aktion-ai-cell">
+                                <div class="aktion-ai-feature">
+                                    <span class="aktion-check-icon">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="white"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    Capture → Organize → Act → tasks, nudges, accountability
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -1758,7 +1801,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="section-title text-center pb--60" data-sal="slide-up" data-sal-duration="700"
+                        <div class="section-title text-center pb--30" data-sal="slide-up" data-sal-duration="700"
                             data-sal-delay="100">
 
                             <h2 class="title mb--0">Why teams rely on us</h2>

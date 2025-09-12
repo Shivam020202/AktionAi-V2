@@ -1082,27 +1082,24 @@ const aktionFeatures = [
   {
     id: 1,
     icon: {
-      gradient: "aktion-icon-1",
+      gradient: "aktion-icon-3",
       svg: `<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
- <path d="M12.913 17H20.087M12.913 17L11 21M12.913 17L15.7783 11.009C16.0092 10.5263 16.1246 10.2849 16.2826 10.2086C16.4199 10.1423 16.5801 10.1423 16.7174 10.2086C16.8754 10.2849 16.9908 10.5263 17.2217 11.009L20.087 17M20.087 17L22 21M2 5H8M8 5H11.5M8 5V3M11.5 5H14M11.5 5C11.0039 7.95729 9.85259 10.6362 8.16555 12.8844M10 14C9.38747 13.7248 8.76265 13.3421 8.16555 12.8844M8.16555 12.8844C6.81302 11.8478 5.60276 10.4266 5 9M8.16555 12.8844C6.56086 15.0229 4.47143 16.7718 2 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
- </svg>
-
-`,
+ <path d="M5 8L10 13M4 14L10 8L12 5M2 5H14M7 2H8M12.913 17H20.087M12.913 17L11 21M12.913 17L15.7783 11.009C16.0092 10.5263 16.1246 10.2849 16.2826 10.2086C16.4199 10.1423 16.5801 10.1423 16.7174 10.2086C16.8754 10.2849 16.9908 10.5263 17.2217 11.009L20.087 17M20.087 17L22 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+ </svg>`,
     },
-    title: "Multilingual Input - Both Offline & Online",
+    title: "Optimized AI for Every Business Need",
     description:
-      "No more language barriers. Just seamless collaboration. AktionAI understands over 50+ languages, ensuring global teams stay aligned—no matter where they are",
+      "AktionAI adapts to your industry, workflows, and preferred AI models, providing top-tier task generation that's tailored for your business. We offer a multi-language AI model management platform to help you:",
     points: [
-      "AI-Generated Tasks in Any Language – Extract and organize tasks while maintaining accuracy and context",
-      "Language-Aware AI Models – Process complex grammar and nuances effortlessly",
-      "Localized Task Outputs – Deliver action items in your sector specific terms",
-      "Built-In Translation Support – Automatically convert tasks for smooth cross-language collaboration",
+      "Choose the best AI model: Select from multiple AI language models to find the perfect fit for your specific needs.",
+      "Track performance: Monitor the accuracy, efficiency, and cost of each model to ensure you're getting the best return on your investment.",
+      "Customize settings: Prioritize AI settings based on your organization's structure, allowing you to fine-tune the platform to your unique requirements.",
     ],
     link: {
-      text: "Work Across Borders Effortlessly",
+      text: "Optimize Your AI Workflow",
       url: "#",
     },
-    image: "assets/images/features/Multi-Lingua-.webp",
+    image: "assets/images/creatives/business.jpg",
   },
   {
     id: 2,
@@ -1112,79 +1109,57 @@ const aktionFeatures = [
  <path d="M6 6L10.5 10.5M6 6H3L2 3L3 2L6 3V6ZM19.259 2.74101L16.6314 5.36863C16.2354 5.76465 16.0373 5.96265 15.9632 6.19098C15.8979 6.39183 15.8979 6.60817 15.9632 6.80902C16.0373 7.03735 16.2354 7.23535 16.6314 7.63137L16.8686 7.86863C17.2646 8.26465 17.4627 8.46265 17.691 8.53684C17.8918 8.6021 18.1082 8.6021 18.309 8.53684C18.5373 8.46265 18.7354 8.26465 19.1314 7.86863L21.5893 5.41072C21.854 6.05488 22 6.76039 22 7.5C22 10.5376 19.5376 13 16.5 13C16.1338 13 15.7759 12.9642 15.4298 12.8959C14.9436 12.8001 14.7005 12.7521 14.5532 12.7668C14.3965 12.7824 14.3193 12.8059 14.1805 12.8802C14.0499 12.9501 13.919 13.081 13.657 13.343L6.5 20.5C5.67157 21.3284 4.32843 21.3284 3.5 20.5C2.67157 19.6716 2.67157 18.3284 3.5 17.5L10.657 10.343C10.919 10.081 11.0499 9.95005 11.1198 9.81949C11.1941 9.68068 11.2176 9.60347 11.2332 9.44681C11.2479 9.29945 11.1999 9.05638 11.1041 8.57024C11.0358 8.22406 11 7.86621 11 7.5C11 4.46243 13.4624 2 16.5 2C17.5055 2 18.448 2.26982 19.259 2.74101ZM12.0001 14.9999L17.5 20.4999C18.3284 21.3283 19.6716 21.3283 20.5 20.4999C21.3284 19.6715 21.3284 18.3283 20.5 17.4999L15.9753 12.9753C15.655 12.945 15.3427 12.8872 15.0408 12.8043C14.6517 12.6975 14.2249 12.7751 13.9397 13.0603L12.0001 14.9999Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
  </svg>`,
     },
-    title: "Effortless Integration with Task Management Tools",
+    title: "Enhanced Productivity with Advanced Integrations and Features",
     description:
-      "Connect your favorite tools. AktionAI seamlessly integrates with Optimore, Jira, Asana, Trello, Monday.com and more—so you never have to switch platforms",
+      "Our platform is designed to boost your team's productivity and streamline daily operations with powerful tools and seamless integrations. AktionAI helps you to:",
     points: [
-      "One-Click Connectivity – Sync tasks with your existing workflows instantly",
-      "Enterprise API Support – Get custom API access for proprietary systems",
-      "Real-Time Task Sync – Keep projects updated across multiple platforms",
-      "Automated Task Assignments – AI-driven delegation within your tools",
+      "Manage your schedule effortlessly: The new Events menu lets you create, view, and organize Google Calendar events directly within the app, simplifying your workflow.",
+      'Access content instantly: With "View in Transcript," you can click on any action item to be taken directly to the exact moment it was discussed in the meeting transcript, saving you time and effort.',
+      "Improve content quality: The underlying prompts for action item generation have been updated to improve the quality and relevance of the output, making your summaries more actionable and precise.",
     ],
     link: {
       text: "Integrate in Seconds",
       url: "#",
     },
-    image: "assets/images/features/task.webp",
+    image: "assets/images/creatives/multitasking.jpg",
   },
   {
     id: 3,
     icon: {
-      gradient: "aktion-icon-3",
+      gradient: "aktion-icon-1",
       svg: `<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
- <path d="M5 8L10 13M4 14L10 8L12 5M2 5H14M7 2H8M12.913 17H20.087M12.913 17L11 21M12.913 17L15.7783 11.009C16.0092 10.5263 16.1246 10.2849 16.2826 10.2086C16.4199 10.1423 16.5801 10.1423 16.7174 10.2086C16.8754 10.2849 16.9908 10.5263 17.2217 11.009L20.087 17M20.087 17L22 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M12.913 17H20.087M12.913 17L11 21M12.913 17L15.7783 11.009C16.0092 10.5263 16.1246 10.2849 16.2826 10.2086C16.4199 10.1423 16.5801 10.1423 16.7174 10.2086C16.8754 10.2849 16.9908 10.5263 17.2217 11.009L20.087 17M20.087 17L22 21M2 5H8M8 5H11.5M8 5V3M11.5 5H14M11.5 5C11.0039 7.95729 9.85259 10.6362 8.16555 12.8844M10 14C9.38747 13.7248 8.76265 13.3421 8.16555 12.8844M8.16555 12.8844C6.81302 11.8478 5.60276 10.4266 5 9M8.16555 12.8844C6.56086 15.0229 4.47143 16.7718 2 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
  </svg>`,
     },
-    title: "Multi-Language AI Model Management",
+    title: "A Multi-LLM Architecture for Superior Performance",
     description:
-      "Optimized AI for every business need. AktionAI adapts to your industry, workflows, and preferred AI models for top-tier task generation",
+      "We have transitioned to a multi-Large Language Model (LLM) architecture to remove dependency on a single model and provide more robust and versatile AI capabilities. This approach offers several advantages, including:",
     points: [
-      "Multiple AI Language Models – Choose the best model for your needs",
-      "Performance Monitoring – Track accuracy, efficiency, and cost per model",
-      "Admin Customization – Prioritize AI settings based on your organization's structure",
+      "Increased reliability: By utilizing multiple models, the platform avoids single-point-of-failure issues, ensuring continuous service.",
+      "Greater flexibility: Different LLMs can be used for different tasks, allowing us to leverage the strengths of various models for optimal results.",
+      "Future-proof scalability: The architecture is designed to easily integrate new and more advanced models as they become available, ensuring you always have access to the latest technology.",
     ],
     link: {
-      text: "Optimize Your AI Workflow",
+      text: "Work Across Borders Effortlessly",
       url: "#",
     },
-    image: "assets/images/features/language.webp",
+    image: "assets/images/creatives/performance.jpg",
   },
   {
     id: 4,
-    icon: {
-      gradient: "aktion-icon-4",
-      svg: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <path d="M16 4H8C6.89543 4 6 4.89543 6 6V26C6 27.1046 6.89543 28 8 28H24C25.1046 28 26 27.1046 26 26V14M16 4L26 14M16 4V14H26" stroke="white" stroke-width="2"/>
-                  </svg>`,
-    },
-    title: "Transparent Audit Trail & Accountability",
-    description:
-      "Every action tracked. Every task accounted for. Maintain clarity and compliance with a detailed, real-time audit log for all generated tasks",
-    points: [
-      "Full Task Logs – Monitor every task creation, modification, and update",
-      "User Action Tracking – Keep accountability intact with detailed edit history",
-      "Source Data Linking – Trace every action item back to its original transcript",
-    ],
-    link: {
-      text: "Ensure Compliance & Transparency",
-      url: "#",
-    },
-    image: "assets/images/features/audit.webp",
-  },
-  {
-    id: 5,
     icon: {
       gradient: "aktion-icon-5",
       svg: `<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
  <path d="M3 8L15 8M15 8C15 9.65686 16.3431 11 18 11C19.6569 11 21 9.65685 21 8C21 6.34315 19.6569 5 18 5C16.3431 5 15 6.34315 15 8ZM9 16L21 16M9 16C9 17.6569 7.65685 19 6 19C4.34315 19 3 17.6569 3 16C3 14.3431 4.34315 13 6 13C7.65685 13 9 14.3431 9 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
  </svg>`,
     },
-    title: "Customizable User & Company Preferences",
+    title: "Seamless User Experience and Modern Design",
     description:
-      "Your workflow, your rules. AktionAI adapts to your company's structure, permissions, and task generation settings—because one size doesn't fit all",
+      "We've enhanced the application's performance and user interface to provide a smoother and more visually appealing experience. Our focus on modern UI design ensures you can work efficiently without frustration. Key improvements include:",
     points: [
-      "Flexible Workflows – Adjust task creation & integration to match your process",
-      "Role-Based Access – Manage permissions for teams, admins, and users",
+      "Optimized performance: Enhanced speed with the use of Skeleton view and shimmer animation, which provide a visually pleasing loading state.",
+      "Intuitive editing: The new option to edit meeting overviews, AI insights, and topics discussed using a rich text editor gives you greater control over your content.",
+      "Streamlined file management: You can now easily modify recording and file titles and import documents and audio files with the selected industry name displayed for quick context.",
     ],
     link: {
       text: "Customize Your AI Settings",
@@ -1193,68 +1168,26 @@ const aktionFeatures = [
     image: "assets/images/features/customizable.webp",
   },
   {
-    id: 6,
-    icon: {
-      gradient: "aktion-icon-6",
-      svg: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <path d="M4 28H28M4 4V28M4 22L10 16L16 22L28 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>`,
-    },
-    title: "AI-Powered Usage Analytics & Reporting",
-    description:
-      "Insights that drive efficiency. Monitor, measure, and optimize your AI-powered task automation with real-time data",
-    points: [
-      "Live Dashboard – View task creation rates, AI performance, and usage insights",
-      "Custom Reports – Generate tailored analytics for business strategy",
-    ],
-    link: {
-      text: "Unlock Data-Driven Productivity",
-      url: "#",
-    },
-    image: "assets/images/features/analytics.webp",
-  },
-  {
-    id: 7,
+    id: 5,
     icon: {
       gradient: "aktion-icon-7",
       svg: `<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
  <path d="M20 10V6.8C20 5.11984 20 4.27976 19.673 3.63803C19.3854 3.07354 18.9265 2.6146 18.362 2.32698C17.7202 2 16.8802 2 15.2 2H8.8C7.11984 2 6.27976 2 5.63803 2.32698C5.07354 2.6146 4.6146 3.07354 4.32698 3.63803C4 4.27976 4 5.11984 4 6.8V17.2C4 18.8802 4 19.7202 4.32698 20.362C4.6146 20.9265 5.07354 21.3854 5.63803 21.673C6.27976 22 7.11984 22 8.8 22H10.5M19.25 17V15.25C19.25 14.2835 18.4665 13.5 17.5 13.5C16.5335 13.5 15.75 14.2835 15.75 15.25V17M15.6 21H19.4C19.9601 21 20.2401 21 20.454 20.891C20.6422 20.7951 20.7951 20.6422 20.891 20.454C21 20.2401 21 19.9601 21 19.4V18.6C21 18.0399 21 17.7599 20.891 17.546C20.7951 17.3578 20.6422 17.2049 20.454 17.109C20.2401 17 19.9601 17 19.4 17H15.6C15.0399 17 14.7599 17 14.546 17.109C14.3578 17.2049 14.2049 17.3578 14.109 17.546C14 17.7599 14 18.0399 14 18.6V19.4C14 19.9601 14 20.2401 14.109 20.454C14.2049 20.6422 14.3578 20.7951 14.546 20.891C14.7599 21 15.0399 21 15.6 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
  </svg>`,
     },
-    title: "Enterprise-Grade Security & Compliance",
+    title: "Secure and Efficient Financial Operations",
     description:
-      "Your data. Fully protected. With GDPR, HIPAA, and enterprise-grade encryption, AktionAI keeps your sensitive information safe",
+      "AktionAI integrates with Razorpay to provide a secure and hassle-free payment solution for your business. Our robust payment gateway ensures that all transactions are handled smoothly and securely. This integration allows you to:",
     points: [
-      "Industry Compliance – Built to meet global security standards",
-      "End-to-End Encryption – Secure task storage and controlled access",
-      "SSO & MFA Support – Strengthen protection with single sign-on and multi-factor authentication",
+      "Accept payments easily: Benefit from a wide range of payment options, including cards, UPI, and wallets, with an easy-to-integrate checkout experience.",
+      "Streamline financial workflows: Manage payments, subscriptions, and more with a powerful dashboard that gives you real-time data and insights.",
+      "Ensure data security: The integration adheres to high-level security standards, protecting your customers' sensitive financial information.",
     ],
     link: {
       text: "Secure Your Workflows",
       url: "#",
     },
     image: "assets/images/features/security.webp",
-  },
-  {
-    id: 8,
-    icon: {
-      gradient: "aktion-icon-4",
-      svg: `<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
- <path d="M21 18L19.9999 19.094C19.4695 19.6741 18.7502 20 18.0002 20C17.2501 20 16.5308 19.6741 16.0004 19.094C15.4693 18.5151 14.75 18.1901 14.0002 18.1901C13.2504 18.1901 12.5312 18.5151 12 19.094M3.00003 20H4.67457C5.16376 20 5.40835 20 5.63852 19.9447C5.84259 19.8957 6.03768 19.8149 6.21663 19.7053C6.41846 19.5816 6.59141 19.4086 6.93732 19.0627L19.5001 6.49998C20.3285 5.67156 20.3285 4.32841 19.5001 3.49998C18.6716 2.67156 17.3285 2.67156 16.5001 3.49998L3.93729 16.0627C3.59139 16.4086 3.41843 16.5816 3.29475 16.7834C3.18509 16.9624 3.10428 17.1574 3.05529 17.3615C3.00003 17.5917 3.00003 17.8363 3.00003 18.3255V20Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
- </svg>`,
-    },
-    title: "Smart Task Management Features",
-    description: "Total control over every AI-generated task",
-    points: [
-      "Editable Tasks – Modify descriptions, names, and assignments anytime",
-      "AI Task Regeneration – Adjust tasks dynamically based on feedback",
-      "Task Dependencies – Link related tasks for better workflow planning",
-    ],
-    link: {
-      text: "Take Control of AI Tasks",
-      url: "contact.html",
-    },
-    image: "assets/images/features/task-management.webp",
   },
 ];
 

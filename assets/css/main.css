@@ -132,11 +132,12 @@ input {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 2px;
   border: 2px solid #990000 !important;
   color: #990000;
   text-decoration: none;
-  padding: 4px 12px;
+  padding: 4px 18px;
+  padding-left: 12px;
   border-radius: 100px;
   font-size: 14px;
   font-weight: 500;
@@ -530,6 +531,7 @@ input {
     flex-direction: column;
     padding: 4rem 1.5rem;
     gap: 3rem;
+    margin-top: 40px;
     min-height: auto;
   }
 
@@ -732,27 +734,32 @@ input {
     font-size: 24px;
   }
 }
-
 /* Features section */
 .aktion-feature-section {
   padding: 20px 0;
 }
 
-.aktion-feature-subtitle {
-  color: #a855f7;
-  text-align: center;
-  font-size: 16px;
-  margin-bottom: 16px;
+.section-title {
+  margin-bottom: 60px;
 }
 
-.aktion-feature-title {
+.title {
   color: #333;
   text-align: center;
   font-size: 48px;
-  margin-bottom: 60px;
+  margin-bottom: 0;
   font-weight: 600;
 }
 
+.pb--30 {
+  padding-bottom: 30px;
+}
+
+.mb--0 {
+  margin-bottom: 0;
+}
+
+/* Table wrapper */
 .aktion-comparison-wrapper {
   background: #ffffff;
   border-radius: 24px;
@@ -760,81 +767,117 @@ input {
   overflow: hidden;
   margin: 0 auto;
   max-width: 1200px;
-  display: flex;
 }
 
-.aktion-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+/* Table styling */
+.aktion-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-bottom: 0px;
 }
 
-.aktion-column-header {
-  /* display: flex; */
-  /* align-items: center; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Column widths */
+.aktion-comparison-table col:nth-child(1) {
+  width: 33.33%;
+}
+.aktion-comparison-table col:nth-child(2) {
+  width: 33.33%;
+}
+.aktion-comparison-table col:nth-child(3) {
+  width: 33.33%;
+}
+
+/* Header styling */
+.aktion-table-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.aktion-challenge-header {
+  background: #fff;
   padding: 30px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.aktion-traditional-header {
+  background: #f8f8f8;
+  padding: 30px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+  vertical-align: middle;
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.aktion-ai-header {
+  background: #770000;
+  padding: 30px;
+  text-align: center;
+  vertical-align: middle;
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .aktion-header-title {
   font-size: 24px;
-  /* margin: 0 auto; */
   font-weight: 600;
   color: #333;
-  text-align: center;
   margin: 0;
+}
+
+.aktion-ai-header .aktion-header-title {
+  color: white;
 }
 
 .aktion-header-subtitle {
   font-size: 14px;
   color: #666;
   font-style: italic;
-  text-align: center;
-  margin-bottom: 0px;
-  /* margin-top: 8px; */
+  margin: 8px 0 0 0;
 }
 
 .aktion-header-subtitle-2 {
   font-size: 14px;
   color: white;
   font-style: italic;
-  text-align: center;
-  margin-bottom: 0px;
-  /* margin-top: 8px; */
-}
-
-.aktion-challenge-column {
-  background: #fff;
-}
-
-.aktion-traditional-column {
-  background: #f8f8f8;
-}
-
-.aktion-ai-column {
-  background: #770000;
-}
-
-.aktion-ai-column .aktion-column-header {
-  display: flex;
-  justify-content: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 8px 0 0 0;
 }
 
 .aktion-logo-table {
   height: 40px;
-  margin: 0 auto;
+  margin: 0 auto 8px auto;
   width: auto;
+  display: block;
 }
 
-.aktion-row-item {
-  padding: 20px 30px;
+/* Row styling */
+.aktion-table-row {
   min-height: 80px;
-  display: flex;
-  align-items: center;
+}
+
+.aktion-challenge-cell {
+  background: #fff;
+  padding: 20px 30px;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.aktion-traditional-cell {
+  background: #f8f8f8;
+  padding: 20px 30px;
+  vertical-align: middle;
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.aktion-ai-cell {
+  background: #770000;
+  padding: 20px 30px;
+  vertical-align: middle;
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .aktion-challenge-text {
@@ -864,8 +907,9 @@ input {
   justify-content: center;
 }
 
+/* Responsive design */
 @media (max-width: 991px) {
-  .aktion-feature-title {
+  .title {
     font-size: 36px;
   }
 
@@ -873,34 +917,45 @@ input {
     font-size: 20px;
   }
 
-  .aktion-column-header {
+  .aktion-challenge-header,
+  .aktion-traditional-header,
+  .aktion-ai-header {
     padding: 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .aktion-traditional-column {
+  /* Hide traditional column on mobile */
+  .aktion-comparison-table col:nth-child(2),
+  .aktion-traditional-header,
+  .aktion-traditional-cell {
     display: none;
+  }
+
+  /* Adjust column widths for mobile */
+  .aktion-comparison-table col:nth-child(1),
+  .aktion-comparison-table col:nth-child(3) {
+    width: 50%;
   }
 
   .aktion-comparison-wrapper {
     margin: 0 15px;
   }
 
-  .aktion-row-item {
+  .aktion-challenge-cell,
+  .aktion-ai-cell {
     padding: 15px 20px;
   }
 
-  .aktion-feature-title {
+  .title {
     font-size: 28px;
     padding: 0 15px;
   }
 
-  .aktion-logo {
+  .aktion-logo-table {
     height: 32px;
   }
 }
-
 /* CTA section */
 /* Redesigned CTA Section Styles */
 .productivity-boost-section {
@@ -912,7 +967,224 @@ input {
 
 .productivity-boost-section::before {
   content: "";
-  position: absolute;
+  position: absolute; /* Features section */
+  .aktion-feature-section {
+    padding: 20px 0;
+  }
+
+  .section-title {
+    margin-bottom: 60px;
+  }
+
+  .title {
+    color: #333;
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+
+  .pb--30 {
+    padding-bottom: 30px;
+  }
+
+  .mb--0 {
+    margin-bottom: 0;
+  }
+
+  /* Table wrapper */
+  .aktion-comparison-wrapper {
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  /* Table styling */
+  .aktion-comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  /* Column widths */
+  .aktion-comparison-table col:nth-child(1) {
+    width: 33.33%;
+  }
+  .aktion-comparison-table col:nth-child(2) {
+    width: 33.33%;
+  }
+  .aktion-comparison-table col:nth-child(3) {
+    width: 33.33%;
+  }
+
+  /* Header styling */
+  .aktion-table-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  .aktion-challenge-header {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .aktion-traditional-header {
+    background: #f8f8f8;
+    padding: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  .aktion-ai-header {
+    background: #770000;
+    padding: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .aktion-header-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+
+  .aktion-ai-header .aktion-header-title {
+    color: white;
+  }
+
+  .aktion-header-subtitle {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    margin: 8px 0 0 0;
+  }
+
+  .aktion-header-subtitle-2 {
+    font-size: 14px;
+    color: white;
+    font-style: italic;
+    margin: 8px 0 0 0;
+  }
+
+  .aktion-logo-table {
+    height: 40px;
+    margin: 0 auto 8px auto;
+    width: auto;
+    display: block;
+  }
+
+  /* Row styling */
+  .aktion-table-row {
+    min-height: 80px;
+  }
+
+  .aktion-challenge-cell {
+    background: #fff;
+    padding: 20px 30px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  .aktion-traditional-cell {
+    background: #f8f8f8;
+    padding: 20px 30px;
+    vertical-align: middle;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  .aktion-ai-cell {
+    background: #770000;
+    padding: 20px 30px;
+    vertical-align: middle;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  .aktion-challenge-text {
+    color: #666;
+    font-weight: 500;
+  }
+
+  .aktion-traditional-text {
+    color: #666;
+  }
+
+  .aktion-ai-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+  }
+
+  .aktion-check-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Responsive design */
+  @media (max-width: 991px) {
+    .title {
+      font-size: 36px;
+    }
+
+    .aktion-header-title {
+      font-size: 20px;
+    }
+
+    .aktion-challenge-header,
+    .aktion-traditional-header,
+    .aktion-ai-header {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* Hide traditional column on mobile */
+    .aktion-comparison-table col:nth-child(2),
+    .aktion-traditional-header,
+    .aktion-traditional-cell {
+      display: none;
+    }
+
+    /* Adjust column widths for mobile */
+    .aktion-comparison-table col:nth-child(1),
+    .aktion-comparison-table col:nth-child(3) {
+      width: 50%;
+    }
+
+    .aktion-comparison-wrapper {
+      margin: 0 15px;
+    }
+
+    .aktion-challenge-cell,
+    .aktion-ai-cell {
+      padding: 15px 20px;
+    }
+
+    .title {
+      font-size: 28px;
+      padding: 0 15px;
+    }
+
+    .aktion-logo-table {
+      height: 32px;
+    }
+  }
   top: -150px;
   right: -150px;
   width: 300px;
@@ -4788,7 +5060,7 @@ input {
 /* Auto-sliding Images - Optimized for 4 Images */
 .image-slider {
   width: 620px;
-  height: 600px;
+  height: fit-content;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
@@ -4801,8 +5073,8 @@ input {
 }
 
 .image-slide {
-  width: 300px;
-  height: 600px;
+  width: 313px;
+  height: 475px;
   margin-right: 20px;
   border-radius: 12px;
   overflow: hidden;
@@ -4856,9 +5128,9 @@ input {
   }
 
   .image-slider {
-    width: 100%;
+    /* width: 100%;
     max-width: 300px;
-    height: 400px;
+    height: 400px; */
   }
 
   .image-track {
@@ -4867,8 +5139,8 @@ input {
   }
 
   .image-slide {
-    width: 300px;
-    height: 400px;
+    /* width: 300px;
+    height: 400px; */
     margin-right: 20px; /* Keep margin for mobile too */
   }
 
@@ -4890,10 +5162,10 @@ input {
   }
 
   .image-slider {
-    height: 350px;
+    /* height: 350px; */
   }
 
   .image-slide {
-    height: 350px;
+    /* height: 350px; */
   }
 }
