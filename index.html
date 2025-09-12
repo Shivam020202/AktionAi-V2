@@ -838,7 +838,7 @@
             font-size: 1.4rem;
             line-height: 1.6;
             color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 36px;
+            margin-bottom: 16px;
             font-weight: 400;
         }
 
@@ -900,7 +900,7 @@
             position: relative;
             z-index: 10;
             width: 260px;
-            height: 520px;
+            height: 535px;
             background: #000;
             border-radius: 40px;
             padding: 8px;
@@ -918,13 +918,13 @@
         .prod-app-phone-screen {
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            /* background: linear-gradient(180deg, #667eea 0%, #764ba2 100%); */
             border-radius: 32px;
             position: relative;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            padding: 40px 20px;
+            /* padding-bottom: 4px; */
         }
 
         .prod-app-notch {
@@ -1078,6 +1078,19 @@
             .prod-app-cta-section {
                 padding: 40px 15px;
             }
+        }
+
+        .prod-app-features {
+            list-style: outside;
+
+            padding-left: 20px;
+        }
+
+        .prod-app-features li {
+            color: white;
+            font-size: 1.4rem;
+            margin-top: 5px;
+            margin-bottom: 5px;
         }
     </style>
 </head>
@@ -1335,7 +1348,7 @@
                 <div class="col-lg-12 mt-5">
                     <div class="section-title text-center pb--30 " data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="100">
-                        <h2 class="title mb--0">Key Features of AktionAi</h2>
+                        <h2 class="title mb--0">Key Features of AktionAI</h2>
                     </div>
                 </div>
             </div>
@@ -1385,6 +1398,12 @@
                             <p class="prod-app-subheading">Transform your workplace chaos into seamless productivity.
                                 Manage
                                 tasks, track progress, and collaborate like never before.</p>
+                            <ul class="prod-app-features">
+                                <li>Create & manage events seamlessly</li>
+                                <li>All schedules at one place</li>
+                                <li>Record important details with a click</li>
+                                <li>Rich text editing and AI insights</li>
+                            </ul>
 
                             <div class="prod-app-buttons">
                                 <a href="#" class="prod-app-btn prod-app-btn-primary">
@@ -1410,26 +1429,7 @@
                                 <div class="prod-app-phone-screen">
                                     <div class="prod-app-notch"></div>
 
-                                    <div class="prod-app-screen-header">
-                                        <div class="prod-app-app-icon">🚀</div>
-                                        <div class="prod-app-app-name">TaskFlow Pro</div>
-                                        <div class="prod-app-app-subtitle">Productivity Simplified</div>
-                                    </div>
-
-                                    <div class="prod-app-screen-cards">
-                                        <div class="prod-app-card">
-                                            <div class="prod-app-card-title">Daily Tasks</div>
-                                            <div class="prod-app-card-subtitle">8 tasks remaining</div>
-                                        </div>
-                                        <div class="prod-app-card">
-                                            <div class="prod-app-card-title">Team Progress</div>
-                                            <div class="prod-app-card-subtitle">87% completed</div>
-                                        </div>
-                                        <div class="prod-app-card">
-                                            <div class="prod-app-card-title">Upcoming Deadlines</div>
-                                            <div class="prod-app-card-subtitle">3 projects due soon</div>
-                                        </div>
-                                    </div>
+                                    <img src="assets/images/creatives/phone-mockup.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -1441,7 +1441,7 @@
         <section class="section-bg">
             <div class="c-hotels">
                 <h1 class="c-hotels__title">
-                    Who benefits from AktionAI?
+                    Who Benefits From AktionAI?
                 </h1>
 
                 <ul class="c-hotels__list">
