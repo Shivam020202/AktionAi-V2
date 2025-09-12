@@ -1082,6 +1082,53 @@ const aktionFeatures = [
   {
     id: 1,
     icon: {
+      gradient: "aktion-icon-4",
+      svg: `<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <path d="M10.5 19.9V4.1C10.5 2.6 9.86 2 8.27 2H4.23C2.64 2 2 2.6 2 4.1V19.9C2 21.4 2.64 22 4.23 22H8.27C9.86 22 10.5 21.4 10.5 19.9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M22 10.9V4.1C22 2.6 21.36 2 19.77 2H15.73C14.14 2 13.5 2.6 13.5 4.1V10.9C13.5 12.4 14.14 13 15.73 13H19.77C21.36 13 22 12.4 22 10.9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M22 19.9V17.1C22 15.6 21.36 15 19.77 15H15.73C14.14 15 13.5 15.6 13.5 17.1V19.9C13.5 21.4 14.14 22 15.73 22H19.77C21.36 22 22 21.4 22 19.9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+ </svg>`,
+    },
+    title: "Multilingual Language Support",
+    description:
+      "AktionAI breaks down communication barriers and allows your global teams to collaborate seamlessly. With support for over 50 languages and smart, language-aware models, our platform ensures your team can work together effectively, regardless of their native tongue. Our features include:",
+    points: [
+      "Multilingual input: Our system understands and processes conversations in over 50 languages, ensuring all team members can be understood.",
+      "AI-generated tasks in any language: The AI can extract and organize tasks while maintaining accuracy and context, no matter the language.",
+      "Localized task outputs: The platform delivers actionable items in the preferred output language and can automatically translate tasks for smooth cross-language collaboration.",
+    ],
+    link: {
+      text: "Collaborate Across Languages",
+      url: "#",
+    },
+    image: "assets/images/features/Multi-Lingua-.webp",
+  },
+  {
+    id: 2,
+    icon: {
+      gradient: "aktion-icon-6",
+      svg: `<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <path d="M8 2V5M16 2V5M3.5 9.09H20.5M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M15.6949 13.7H15.7039M15.6949 16.7H15.7039M11.9949 13.7H12.0049M11.9949 16.7H12.0049M8.29492 13.7H8.30492M8.29492 16.7H8.30492" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+ </svg>`,
+    },
+    title: "Events Feature to Sync with Google Calendar",
+    description:
+      "The new Events section is designed to help you manage your Google Calendar events directly from within the AktionAI app. This integration streamlines your workflow and keeps you organized. Our calendar features help you:",
+    points: [
+      "View and manage events: Easily view, create, and organize your meetings and events without having to switch between applications.",
+      "Record events directly: The app allows you to record an event directly from your calendar, ensuring you never miss a discussion and can capture every detail.",
+      "Simplify scheduling: With the ability to manage all your events in one place, you can simplify your daily routine and focus on what's important.",
+    ],
+    link: {
+      text: "Integrate Your Calendar",
+      url: "#",
+    },
+    image: "assets/images/features/calendar.jpg",
+  },
+  {
+    id: 3,
+    icon: {
       gradient: "aktion-icon-3",
       svg: `<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
  <path d="M5 8L10 13M4 14L10 8L12 5M2 5H14M7 2H8M12.913 17H20.087M12.913 17L11 21M12.913 17L15.7783 11.009C16.0092 10.5263 16.1246 10.2849 16.2826 10.2086C16.4199 10.1423 16.5801 10.1423 16.7174 10.2086C16.8754 10.2849 16.9908 10.5263 17.2217 11.009L20.087 17M20.087 17L22 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1102,7 +1149,7 @@ const aktionFeatures = [
     image: "assets/images/creatives/business.jpg",
   },
   {
-    id: 2,
+    id: 4,
     icon: {
       gradient: "aktion-icon-2",
       svg: `<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1124,7 +1171,7 @@ const aktionFeatures = [
     image: "assets/images/creatives/multitasking.jpg",
   },
   {
-    id: 3,
+    id: 5,
     icon: {
       gradient: "aktion-icon-1",
       svg: `<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1146,7 +1193,7 @@ const aktionFeatures = [
     image: "assets/images/creatives/performance.jpg",
   },
   {
-    id: 4,
+    id: 6,
     icon: {
       gradient: "aktion-icon-5",
       svg: `<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1168,7 +1215,7 @@ const aktionFeatures = [
     image: "assets/images/features/customizable.webp",
   },
   {
-    id: 5,
+    id: 7,
     icon: {
       gradient: "aktion-icon-7",
       svg: `<svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
