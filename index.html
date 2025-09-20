@@ -1343,47 +1343,315 @@
             </div>
         </div> -->
 
-        <div class="tab-section">
+        <div class="vs-main-container">
+            <!-- Hero Section -->
             <div>
-                <div class="col-lg-12 mt-5">
-                    <div class="section-title text-center pb--30 " data-sal="slide-up" data-sal-duration="700"
+                <div class="col-lg-12">
+                    <div class="section-title text-center pb--30" data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="100">
-                        <h2 class="title mb--0">Key Features of AktionAI</h2>
+                        <h2 class="title mb--0">Key Features Of AktionAI</h2>
                     </div>
                 </div>
             </div>
-            <!-- Separated Tab Navigation -->
-            <div class="tab-navigation">
-                <button class="tab-button active" data-tab="conversations">Conversations</button>
-                <button class="tab-button" data-tab="insights">Insights</button>
-                <button class="tab-button" data-tab="impact">Impact</button>
-                <!-- <button class="tab-button" data-tab="context">Quick Context</button>
-                <button class="tab-button" data-tab="transcription">Transcription</button> -->
+
+            <!-- Main Category Tabs -->
+            <div class="vs-main-categories">
+                <button class="vs-main-category-btn vs-active"
+                    onclick="showMainCategory('conversations')">Conversations</button>
+                <button class="vs-main-category-btn" onclick="showMainCategory('insights')">Insights</button>
+                <button class="vs-main-category-btn" onclick="showMainCategory('impact')">Impact</button>
             </div>
 
-            <!-- Separated Image Container -->
-            <div class="tab-content">
-                <div class="tab-image active" data-content="conversations">
-                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Record Button Interface">
-                    <div class="image-overlay"></div>
-                    <div class="image-label">One-Click Recording</div>
-                </div>
-                <div class="tab-image" data-content="insights">
-                    <img src="https://images.unsplash.com/photo-1595928796398-1d0ac507eed0?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Language Selection">
-                    <div class="image-overlay"></div>
-                    <div class="image-label">Multi-Language Support</div>
-                </div>
-                <div class="tab-image" data-content="impact">
-                    <img src="https://images.unsplash.com/photo-1597856222214-93212f7a54bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Offline Mode">
-                    <div class="image-overlay"></div>
-                    <div class="image-label">Works Offline</div>
+            <!-- Content Area -->
+            <div class="vs-content-area">
+                <!-- Conversations Content -->
+                <div class="vs-category-content vs-active" id="conversations-content">
+                    <div class="vs-category-layout">
+                        <div class="vs-sub-categories">
+                            <h3 class="vs-sub-category-title">Conversations</h3>
+                            <div class="vs-sub-tabs">
+                                <button class="vs-sub-tab-btn vs-active"
+                                    onclick="showSubCategory('conversations', 'transcription')">Transcription</button>
+                                <button class="vs-sub-tab-btn"
+                                    onclick="showSubCategory('conversations', 'taskboard')">Taskboard</button>
+                                <button class="vs-sub-tab-btn"
+                                    onclick="showSubCategory('conversations', 'offline')">Offline
+                                    Recordings</button>
+                            </div>
+                        </div>
+                        <div class="vs-video-area">
+                            <div class="vs-video-content vs-active" id="conversations-transcription">
+                                <div class="vs-video-header">
+                                    <h3 class="vs-video-title">Real-time Transcription</h3>
+                                    <p class="vs-video-description">Experience accurate, real-time transcription that
+                                        captures
+                                        every word with precision and converts speech to text seamlessly.</p>
+                                </div>
+                                <div class="vs-video-wrapper">
+                                    <video class="vs-video-element" autoplay muted loop>
+                                        <source src="assets/videos/Transcription.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="vs-video-content" id="conversations-taskboard">
+                                <div class="vs-video-header">
+                                    <h3 class="vs-video-title">Interactive Taskboard</h3>
+                                    <p class="vs-video-description">Organize and manage your projects with our intuitive
+                                        taskboard that keeps your team aligned and productive.</p>
+                                </div>
+                                <div class="vs-video-wrapper">
+                                    <video class="vs-video-element" autoplay muted loop>
+                                        <source src="assets/videos/Task Board.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="vs-video-content" id="conversations-offline">
+                                <div class="vs-video-header">
+                                    <h3 class="vs-video-title">Offline Recordings</h3>
+                                    <p class="vs-video-description">Never miss important conversations with our offline
+                                        recording capability that works even without internet connection.</p>
+                                </div>
+                                <div class="vs-video-wrapper">
+                                    <video class="vs-video-element" autoplay muted loop>
+                                        <source src="assets/videos/Offline Record.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- Insights Content -->
+                <div class="vs-category-content" id="insights-content">
+                    <div class="vs-category-layout">
+                        <div class="vs-sub-categories">
+                            <h3 class="vs-sub-category-title">Insights</h3>
+                            <div class="vs-sub-tabs">
+                                <button class="vs-sub-tab-btn vs-active"
+                                    onclick="showSubCategory('insights', 'ai-insights')">AI
+                                    Insights</button>
+                                <button class="vs-sub-tab-btn"
+                                    onclick="showSubCategory('insights', 'summary')">Summary</button>
+                                <button class="vs-sub-tab-btn" onclick="showSubCategory('insights', 'actions')">Action
+                                    Items</button>
+                            </div>
+                        </div>
+                        <div class="vs-video-area">
+                            <div class="vs-video-content vs-active" id="insights-ai-insights">
+                                <div class="vs-video-header">
+                                    <h3 class="vs-video-title">Intelligent AI Insights</h3>
+                                    <p class="vs-video-description">Harness the power of artificial intelligence to
+                                        discover
+                                        patterns and insights hidden in your conversations and data.</p>
+                                </div>
+                                <div class="vs-video-wrapper">
+                                    <video class="vs-video-element" autoplay muted loop>
+                                        <source src="assets/videos/AI Insights at a glance.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="vs-video-content" id="insights-summary">
+                                <div class="vs-video-header">
+                                    <h3 class="vs-video-title">Smart Summaries</h3>
+                                    <p class="vs-video-description">Get concise, intelligent summaries of lengthy
+                                        conversations
+                                        and meetings that capture the essential points.</p>
+                                </div>
+                                <div class="vs-video-wrapper">
+                                    <video class="vs-video-element" autoplay muted loop>
+                                        <source src="assets/videos/Summary card.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="vs-video-content" id="insights-actions">
+                                <div class="vs-video-header">
+                                    <h3 class="vs-video-title">Automated Action Items</h3>
+                                    <p class="vs-video-description">Automatically extract and organize action items from
+                                        meetings to ensure nothing falls through the cracks.</p>
+                                </div>
+                                <div class="vs-video-wrapper">
+                                    <video class="vs-video-element" autoplay muted loop>
+                                        <source src="assets/videos/Action Items.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact Content -->
+                <div class="vs-category-content" id="impact-content">
+                    <div class="vs-category-layout">
+                        <div class="vs-sub-categories">
+                            <h3 class="vs-sub-category-title">Impact</h3>
+                            <div class="vs-sub-tabs">
+                                <button class="vs-sub-tab-btn vs-active"
+                                    onclick="showSubCategory('impact', 'industry')">Industry</button>
+                                <button class="vs-sub-tab-btn" onclick="showSubCategory('impact', 'calendar')">Calendar
+                                    Sync</button>
+                                <button class="vs-sub-tab-btn" onclick="showSubCategory('impact', 'language')">Output
+                                    Language</button>
+                            </div>
+                        </div>
+                        <div class="vs-video-area">
+                            <div class="vs-video-content vs-active" id="impact-industry">
+                                <div class="vs-video-header">
+                                    <h3 class="vs-video-title">Industry Solutions</h3>
+                                    <p class="vs-video-description">Tailored solutions designed specifically for your
+                                        industry
+                                        needs and business requirements.</p>
+                                </div>
+                                <div class="vs-video-wrapper">
+                                    <video class="vs-video-element" autoplay muted loop>
+                                        <source src="assets/videos/Filter by Industry.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="vs-video-content" id="impact-calendar">
+                                <div class="vs-video-header">
+                                    <h3 class="vs-video-title">Seamless Calendar Integration</h3>
+                                    <p class="vs-video-description">Effortlessly sync with your calendar systems to
+                                        streamline
+                                        scheduling and meeting management.</p>
+                                </div>
+                                <div class="vs-video-wrapper">
+                                    <video class="vs-video-element" autoplay muted loop>
+                                        <source src="assets/videos/Google Calendar Sync.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="vs-video-content" id="impact-language">
+                                <div class="vs-video-header">
+                                    <h3 class="vs-video-title">Multi-language Output</h3>
+                                    <p class="vs-video-description">Generate outputs in multiple languages to reach
+                                        global
+                                        audiences and break down communication barriers.</p>
+                                </div>
+                                <div class="vs-video-wrapper">
+                                    <video class="vs-video-element" autoplay muted loop>
+                                        <source src="assets/videos/Output Language.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <script>
+            // Current state tracking
+            let currentMainCategory = 'conversations';
+            let currentSubCategories = {
+                conversations: 'transcription',
+                insights: 'ai-insights',
+                impact: 'industry'
+            };
+
+            // Main category switching
+            function showMainCategory(category) {
+                // Update main category buttons
+                document.querySelectorAll('.vs-main-category-btn').forEach(btn => {
+                    btn.classList.remove('vs-active');
+                });
+                event.target.classList.add('vs-active');
+
+                // Hide all category content
+                document.querySelectorAll('.vs-category-content').forEach(content => {
+                    content.classList.remove('vs-active');
+                });
+
+                // Show selected category content
+                document.getElementById(`${category}-content`).classList.add('vs-active');
+
+                // Stop all videos
+                document.querySelectorAll('.vs-video-element').forEach(video => {
+                    video.pause();
+                    video.currentTime = 0;
+                });
+
+                // Update current category
+                currentMainCategory = category;
+
+                // Show the current sub-category for this main category
+                showSubCategory(category, currentSubCategories[category]);
+            }
+
+            // Sub category switching
+            function showSubCategory(mainCategory, subCategory) {
+                // Update sub-category buttons
+                const subCategoryContainer = document.querySelector(`#${mainCategory}-content .vs-sub-tabs`);
+                subCategoryContainer.querySelectorAll('.vs-sub-tab-btn').forEach(btn => {
+                    btn.classList.remove('vs-active');
+                });
+                event.target.classList.add('vs-active');
+
+                // Hide all video content in this main category
+                const videoArea = document.querySelector(`#${mainCategory}-content .vs-video-area`);
+                videoArea.querySelectorAll('.vs-video-content').forEach(content => {
+                    content.classList.remove('vs-active');
+                });
+
+                // Show selected video content
+                const targetContent = document.getElementById(`${mainCategory}-${subCategory}`);
+                targetContent.classList.add('vs-active');
+
+                // Stop all videos first
+                document.querySelectorAll('.vs-video-element').forEach(video => {
+                    video.pause();
+                    video.currentTime = 0;
+                });
+
+                // Start the video for the active tab
+                setTimeout(() => {
+                    const activeVideo = targetContent.querySelector('.vs-video-element');
+                    if (activeVideo) {
+                        activeVideo.currentTime = 0;
+                        activeVideo.play().catch(e => {
+                            console.log('Video autoplay prevented:', e);
+                        });
+                    }
+                }, 100);
+
+                // Update current sub-category
+                currentSubCategories[mainCategory] = subCategory;
+            }
+
+            // Initialize on page load
+            document.addEventListener('DOMContentLoaded', function () {
+                // Start the first video
+                setTimeout(() => {
+                    const firstVideo = document.querySelector('.vs-category-content.vs-active .vs-video-content.vs-active .vs-video-element');
+                    if (firstVideo) {
+                        firstVideo.play().catch(e => {
+                            console.log('Video autoplay prevented:', e);
+                        });
+                    }
+                }, 500);
+
+                // Setup video event listeners
+                document.querySelectorAll('.vs-video-element').forEach(video => {
+                    video.addEventListener('ended', function () {
+                        this.currentTime = 0;
+                        this.play();
+                    });
+                });
+            });
+
+            // Parallax effect removed - no longer needed
+            // window.addEventListener('scroll', () => {
+            //     // Parallax code removed
+            // });
+        </script>
 
         <div class="prod-app-reset">
             <section class="prod-app-cta-section">
