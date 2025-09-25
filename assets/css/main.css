@@ -5069,7 +5069,7 @@ input {
 .image-track {
   display: flex;
   width: calc(300px * 8); /* 4 images × 2 for seamless loop */
-  animation: autoSlide 12s infinite linear; /* Reduced from 18s to 12s */
+  animation: autoSlide 20s infinite linear; /* Reduced from 18s to 12s */
 }
 
 .image-slide {
