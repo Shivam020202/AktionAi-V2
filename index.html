@@ -1389,7 +1389,7 @@
                                 </div>
                                 <div class="vs-video-wrapper">
                                     <video class="vs-video-element" autoplay muted loop>
-                                        <source src="assets/videos/Transcription.mp4" type="video/mp4">
+                                        <source src="assets/videos/01 Transcription.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
@@ -1402,7 +1402,7 @@
                                 </div>
                                 <div class="vs-video-wrapper">
                                     <video class="vs-video-element" autoplay muted loop>
-                                        <source src="assets/videos/Task Board.mp4" type="video/mp4">
+                                        <source src="assets/videos/02 Taskboard.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
@@ -1415,7 +1415,7 @@
                                 </div>
                                 <div class="vs-video-wrapper">
                                     <video class="vs-video-element" autoplay muted loop>
-                                        <source src="assets/videos/Offline Record.mp4" type="video/mp4">
+                                        <source src="assets/videos/03-OfflineRecording.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
@@ -1546,111 +1546,6 @@
                 </div>
             </div>
         </div>
-
-        <script>
-            // Current state tracking
-            let currentMainCategory = 'conversations';
-            let currentSubCategories = {
-                conversations: 'transcription',
-                insights: 'ai-insights',
-                impact: 'industry'
-            };
-
-            // Main category switching
-            function showMainCategory(category) {
-                // Update main category buttons
-                document.querySelectorAll('.vs-main-category-btn').forEach(btn => {
-                    btn.classList.remove('vs-active');
-                });
-                event.target.classList.add('vs-active');
-
-                // Hide all category content
-                document.querySelectorAll('.vs-category-content').forEach(content => {
-                    content.classList.remove('vs-active');
-                });
-
-                // Show selected category content
-                document.getElementById(`${category}-content`).classList.add('vs-active');
-
-                // Stop all videos
-                document.querySelectorAll('.vs-video-element').forEach(video => {
-                    video.pause();
-                    video.currentTime = 0;
-                });
-
-                // Update current category
-                currentMainCategory = category;
-
-                // Show the current sub-category for this main category
-                showSubCategory(category, currentSubCategories[category]);
-            }
-
-            // Sub category switching
-            function showSubCategory(mainCategory, subCategory) {
-                // Update sub-category buttons
-                const subCategoryContainer = document.querySelector(`#${mainCategory}-content .vs-sub-tabs`);
-                subCategoryContainer.querySelectorAll('.vs-sub-tab-btn').forEach(btn => {
-                    btn.classList.remove('vs-active');
-                });
-                event.target.classList.add('vs-active');
-
-                // Hide all video content in this main category
-                const videoArea = document.querySelector(`#${mainCategory}-content .vs-video-area`);
-                videoArea.querySelectorAll('.vs-video-content').forEach(content => {
-                    content.classList.remove('vs-active');
-                });
-
-                // Show selected video content
-                const targetContent = document.getElementById(`${mainCategory}-${subCategory}`);
-                targetContent.classList.add('vs-active');
-
-                // Stop all videos first
-                document.querySelectorAll('.vs-video-element').forEach(video => {
-                    video.pause();
-                    video.currentTime = 0;
-                });
-
-                // Start the video for the active tab
-                setTimeout(() => {
-                    const activeVideo = targetContent.querySelector('.vs-video-element');
-                    if (activeVideo) {
-                        activeVideo.currentTime = 0;
-                        activeVideo.play().catch(e => {
-                            console.log('Video autoplay prevented:', e);
-                        });
-                    }
-                }, 100);
-
-                // Update current sub-category
-                currentSubCategories[mainCategory] = subCategory;
-            }
-
-            // Initialize on page load
-            document.addEventListener('DOMContentLoaded', function () {
-                // Start the first video
-                setTimeout(() => {
-                    const firstVideo = document.querySelector('.vs-category-content.vs-active .vs-video-content.vs-active .vs-video-element');
-                    if (firstVideo) {
-                        firstVideo.play().catch(e => {
-                            console.log('Video autoplay prevented:', e);
-                        });
-                    }
-                }, 500);
-
-                // Setup video event listeners
-                document.querySelectorAll('.vs-video-element').forEach(video => {
-                    video.addEventListener('ended', function () {
-                        this.currentTime = 0;
-                        this.play();
-                    });
-                });
-            });
-
-            // Parallax effect removed - no longer needed
-            // window.addEventListener('scroll', () => {
-            //     // Parallax code removed
-            // });
-        </script>
 
         <div class="prod-app-reset">
             <section class="prod-app-cta-section">
@@ -2423,6 +2318,110 @@
         document.addEventListener('DOMContentLoaded', () => {
             new SeparatedTabs();
         });
+    </script>
+    <script>
+        // Current state tracking
+        let currentMainCategory = 'conversations';
+        let currentSubCategories = {
+            conversations: 'transcription',
+            insights: 'ai-insights',
+            impact: 'industry'
+        };
+
+        // Main category switching
+        function showMainCategory(category) {
+            // Update main category buttons
+            document.querySelectorAll('.vs-main-category-btn').forEach(btn => {
+                btn.classList.remove('vs-active');
+            });
+            event.target.classList.add('vs-active');
+
+            // Hide all category content
+            document.querySelectorAll('.vs-category-content').forEach(content => {
+                content.classList.remove('vs-active');
+            });
+
+            // Show selected category content
+            document.getElementById(`${category}-content`).classList.add('vs-active');
+
+            // Stop all videos
+            document.querySelectorAll('.vs-video-element').forEach(video => {
+                video.pause();
+                video.currentTime = 0;
+            });
+
+            // Update current category
+            currentMainCategory = category;
+
+            // Show the current sub-category for this main category
+            showSubCategory(category, currentSubCategories[category]);
+        }
+
+        // Sub category switching
+        function showSubCategory(mainCategory, subCategory) {
+            // Update sub-category buttons
+            const subCategoryContainer = document.querySelector(`#${mainCategory}-content .vs-sub-tabs`);
+            subCategoryContainer.querySelectorAll('.vs-sub-tab-btn').forEach(btn => {
+                btn.classList.remove('vs-active');
+            });
+            event.target.classList.add('vs-active');
+
+            // Hide all video content in this main category
+            const videoArea = document.querySelector(`#${mainCategory}-content .vs-video-area`);
+            videoArea.querySelectorAll('.vs-video-content').forEach(content => {
+                content.classList.remove('vs-active');
+            });
+
+            // Show selected video content
+            const targetContent = document.getElementById(`${mainCategory}-${subCategory}`);
+            targetContent.classList.add('vs-active');
+
+            // Stop all videos first
+            document.querySelectorAll('.vs-video-element').forEach(video => {
+                video.pause();
+                video.currentTime = 0;
+            });
+
+            // Start the video for the active tab
+            setTimeout(() => {
+                const activeVideo = targetContent.querySelector('.vs-video-element');
+                if (activeVideo) {
+                    activeVideo.currentTime = 0;
+                    activeVideo.play().catch(e => {
+                        console.log('Video autoplay prevented:', e);
+                    });
+                }
+            }, 100);
+
+            // Update current sub-category
+            currentSubCategories[mainCategory] = subCategory;
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            // Start the first video
+            setTimeout(() => {
+                const firstVideo = document.querySelector('.vs-category-content.vs-active .vs-video-content.vs-active .vs-video-element');
+                if (firstVideo) {
+                    firstVideo.play().catch(e => {
+                        console.log('Video autoplay prevented:', e);
+                    });
+                }
+            }, 500);
+
+            // Setup video event listeners
+            document.querySelectorAll('.vs-video-element').forEach(video => {
+                video.addEventListener('ended', function () {
+                    this.currentTime = 0;
+                    this.play();
+                });
+            });
+        });
+
+        // Parallax effect removed - no longer needed
+        // window.addEventListener('scroll', () => {
+        //     // Parallax code removed
+        // });
     </script>
 
 </body>
