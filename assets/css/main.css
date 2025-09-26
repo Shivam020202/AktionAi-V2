@@ -5072,6 +5072,10 @@ input {
   animation: autoSlide 20s infinite linear; /* Reduced from 18s to 12s */
 }
 
+.image-slider:hover .image-track {
+  animation-play-state: paused;
+}
+
 .image-slide {
   width: 313px;
   height: 475px;
@@ -5136,6 +5140,10 @@ input {
   .image-track {
     width: calc(320px * 8); /* 4 original + 4 duplicate images */
     animation: autoSlideMobile 16s infinite linear;
+  }
+
+  .image-slider:hover .image-track {
+    animation-play-state: paused;
   }
 
   .image-slide {
